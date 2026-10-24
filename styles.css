@@ -1,11 +1,14 @@
 :root {
-  --ink: #191919;
-  --muted: #646464;
-  --line: #e8e8e8;
+  --ink: #282132;
+  --accent: #7445d4;
+  --accent-dark: #5e32b7;
+  --accent-soft: #f1eafa;
+  --muted: #686071;
+  --line: #e7e0ef;
   --paper: #ffffff;
-  --canvas: #f6f6f6;
-  --soft: #efefef;
-  --shadow: 0 3px 12px #00000004;
+  --canvas: #f8f6fc;
+  --soft: #f2edf8;
+  --shadow: 0 3px 15px #49346708;
 }
 * {
   box-sizing: border-box;
@@ -17,7 +20,7 @@ html {
 body {
   margin: 0;
   padding: 30px 24px;
-  background: #222222;
+  background: #e9e0f3;
   color: var(--ink);
   font-family: "Segoe UI", Arial, sans-serif;
   font-size: 14px;
@@ -44,7 +47,7 @@ button {
 }
 a:focus-visible,
 button:focus-visible {
-  outline: 2px solid #191919;
+  outline: 2px solid var(--accent);
   outline-offset: 5px;
   border-radius: 3px;
 }
@@ -81,8 +84,8 @@ ul {
   display: none !important;
 }
 ::selection {
-  background: #242424;
-  color: white;
+  background: #e3d4fb;
+  color: #38254e;
 }
 .icon {
   width: 20px;
@@ -116,7 +119,7 @@ ul {
   z-index: 100;
   top: -70px;
   left: 30px;
-  background: #111;
+  background: var(--accent);
   color: #fff;
   padding: 10px 18px;
 }
@@ -129,7 +132,7 @@ ul {
   background: var(--canvas);
   border-radius: 28px;
   padding: 20px 20px 0;
-  box-shadow: 0 25px 80px #0002;
+  box-shadow: 0 25px 80px #44246c18;
 }
 
 .resume-shell {
@@ -141,7 +144,7 @@ ul {
 .profile-sidebar {
   background: var(--paper);
   padding: 22px 20px;
-  border: 1px solid #ededed;
+  border: 1px solid var(--line);
   border-radius: 20px;
   position: sticky;
   top: var(--profile-top, min(24px, calc(100dvh - 1026px)));
@@ -162,7 +165,7 @@ ul {
   width: 5px;
   height: 5px;
   border-radius: 50%;
-  background: #111;
+  background: var(--accent);
   box-shadow: 0 0 0 3px #f1f1f1;
 }
 .profile-photo {
@@ -276,7 +279,7 @@ h1 {
     color 0.2s;
 }
 .social-strip a:hover {
-  background: #111;
+  background: var(--accent);
   color: #fff;
 }
 .social-strip .icon {
@@ -304,7 +307,7 @@ main {
 .skill-card {
   background: var(--paper);
   border-radius: 20px;
-  border: 1px solid #ededed;
+  border: 1px solid var(--line);
   box-shadow: var(--shadow);
 }
 .panel {
@@ -391,7 +394,7 @@ main {
   left: -9px;
   top: 7px;
   border-radius: 50%;
-  background: #202020;
+  background: var(--accent);
   box-shadow: 0 0 0 4px #f4f4f4;
 }
 .timeline-date {
@@ -424,7 +427,7 @@ main {
 .entry-icon {
   width: 43px;
   height: 43px;
-  background: #f4f4f4;
+  background: var(--accent-soft);
   border: 1px solid var(--line);
   border-radius: 12px;
   display: grid;
@@ -520,7 +523,7 @@ main {
 .skill-icon {
   width: 36px;
   height: 36px;
-  background: #f6f6f6;
+  background: var(--accent-soft);
   border: 1px solid var(--line);
   border-radius: 10px;
   display: grid;
@@ -617,7 +620,7 @@ main {
   border: 1px solid transparent;
 }
 .project-filters button[aria-pressed="true"] {
-  background: #202020;
+  background: var(--accent);
   color: white;
 }
 .project-filters button:hover {
@@ -664,7 +667,7 @@ main {
   height: 100%;
   object-fit: cover;
   object-position: top;
-  filter: grayscale(1);
+  filter: none;
   transition: transform 0.4s;
 }
 .project-card:hover .project-image > img {
@@ -803,7 +806,7 @@ main {
   padding: 29px;
   margin-top: 4px;
   border-radius: 20px;
-  background: #1c1c1c;
+  background: linear-gradient(125deg, #4d2b7d, #302142);
   color: white;
 }
 .contact-grid {
@@ -812,7 +815,7 @@ main {
   gap: 26px;
 }
 .contact-section .eyebrow {
-  color: #bbb;
+  color: #dac9ef;
   margin-bottom: 18px;
 }
 .contact-copy h2 {
@@ -824,7 +827,7 @@ main {
 .contact-copy > p:not(.eyebrow) {
   margin-top: 15px;
   font-size: 11px;
-  color: #c4c4c4;
+  color: #e5daef;
 }
 .button {
   display: inline-flex;
@@ -854,11 +857,11 @@ main {
   transform: translateY(-2px);
 }
 .button-primary {
-  background: #191919;
+  background: var(--accent);
   color: #fff;
 }
 .button-primary:hover {
-  background: #444;
+  background: var(--accent-dark);
 }
 .button-text:hover {
   text-decoration: underline;
@@ -890,7 +893,7 @@ main {
   display: block;
   font-size: 7px;
   letter-spacing: 0.12em;
-  color: #bbb;
+  color: #dac9ef;
 }
 .contact-item strong {
   display: block;
@@ -960,7 +963,7 @@ main {
   max-height: 350px;
   object-fit: cover;
   object-position: top;
-  filter: grayscale(1);
+  filter: none;
 }
 .dialog-image.is-app {
   height: 320px;
@@ -1010,6 +1013,109 @@ main {
   transition:
     opacity 0.5s ease,
     transform 0.5s ease;
+}
+
+.profile-kicker,
+.profile-role,
+.sidebar-block h2,
+.panel-heading h2,
+.panel-heading h3,
+.eyebrow,
+.timeline-date,
+.entry-icon,
+.skill-icon,
+.image-arrow,
+.detail-button {
+  color: var(--accent-dark);
+}
+.profile-divider {
+  background: #d4bcef;
+}
+.timeline::before {
+  background: #ddcbed;
+}
+.timeline article::before {
+  box-shadow: 0 0 0 4px #f5effc;
+}
+.social-strip a {
+  color: var(--accent-dark);
+}
+.social-strip a:hover {
+  color: white;
+}
+.project-tech li {
+  background: #f4effb;
+  color: #614a7b;
+  border-color: #e9e0f4;
+}
+.completed {
+  color: #35613e;
+  background: #edf6ef;
+}
+.button-white {
+  color: #4e2d75;
+}
+.button-white:hover {
+  background: #eee2fc;
+}
+.app-preview {
+  background: #e7f1e9;
+}
+.doneeit-preview .app-preview-label {
+  color: #295738;
+}
+.financify-preview {
+  background: #edf4e6;
+}
+.financify-preview .app-preview-label {
+  color: #4e6631;
+}
+.html-mark {
+  background: #fff0e6;
+  color: #ad4115;
+  border-color: #f6decf;
+}
+.css-mark {
+  background: #e9f1ff;
+  color: #1c5ca7;
+  border-color: #dbe6f6;
+}
+.js-mark {
+  background: #fff5c4;
+  color: #715600;
+  border-color: #f0e5ac;
+}
+.figma-mark {
+  background: #f6e8ff;
+  color: #8538a8;
+  border-color: #ead5f7;
+}
+.canva-mark {
+  background: #def7f5;
+  color: #007b7e;
+  border-color: #c9ebe8;
+}
+.ps-mark {
+  background: #153755;
+  color: #8bceff;
+  border-color: #153755;
+}
+.vscode-mark {
+  background: #e3f2ff;
+  color: #0069a9;
+  border-color: #cee5f6;
+}
+.github-mark {
+  background: #efedf4;
+  color: #332a41;
+}
+.vercel-mark {
+  background: #eeedf3;
+  color: #2e2539;
+}
+.dialog-note {
+  background: var(--accent-soft);
+  border-color: var(--line);
 }
 @media (min-width: 1500px) {
   body {

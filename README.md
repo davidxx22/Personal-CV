@@ -1,6 +1,6 @@
 # Personal CV — David Rey P. Bali-os
 
-A professional personal curriculum vitae and portfolio website for **David Rey P. Bali-os**, a **Web Developer and UI/UX Designer** based in Sto. Tomas, Davao del Norte, Philippines. Built from scratch with a black-and-white palette, portrait sidebar, rounded information cards, experience timelines, and project gallery.
+A professional personal curriculum vitae and portfolio website for **David Rey P. Bali-os**, a **Web Developer and UI/UX Designer** based in Sto. Tomas, Davao del Norte, Philippines. Built from scratch with a light-and-purple palette, portrait sidebar, rounded information cards, experience timelines, and project gallery.
 
 ## Links
 
@@ -16,7 +16,7 @@ A professional personal curriculum vitae and portfolio website for **David Rey P
 ## Technologies used
 
 - **HTML:** semantic content, sections, navigation, project cards, and accessible image descriptions.
-- **CSS:** responsive Grid/Flexbox layouts, monochrome palette, hover effects, print styles, and reduced-motion support.
+- **CSS:** responsive Grid/Flexbox layouts, purple palette, hover effects, print styles, and reduced-motion support.
 - **JavaScript:** gallery filtering, project dialogs, adaptive sidebar positioning, section reveals, and footer year.
 - **Git and GitHub:** source control and meaningful development commits.
 - **Vercel:** public static website hosting.
@@ -116,3 +116,5 @@ See [SUBMISSION-CHECKLIST.md](SUBMISSION-CHECKLIST.md) for browser checks, deplo
 On October 25, 2026, the site was redesigned around the approved black-and-white reference. The update adds a portrait/contact sidebar, white rounded panels, compact education and experience timelines, and grayscale project previews. All eight projects and existing accessible interactions remain. Responsive widths, mobile navigation, filtering, and keyboard dialog behavior were checked again after the redesign.
 
 The navigation bar and mobile menu were removed at the student’s request. The sidebar portfolio link, project links, contact links, and Back to top link remain available.
+
+The current palette uses lavender surfaces and purple accents. Project previews retain their original colors; only the profile portrait uses a grayscale CSS filter.
