@@ -1,6 +1,6 @@
-# Personal CV — David Rey P. Bali-os
+# Personal CV — David Rey Bali-os
 
-A professional personal curriculum vitae and portfolio website for **David Rey P. Bali-os**, a **Web Developer and UI/UX Designer** based in Sto. Tomas, Davao del Norte, Philippines. Built from scratch with a light-and-purple palette, portrait sidebar, rounded information cards, experience timelines, and project gallery.
+A professional personal curriculum vitae and portfolio website for **David Rey Bali-os**, a **Web Developer and UI/UX Designer** based in Sto. Tomas, Davao del Norte, Philippines. Built from scratch with a light-and-purple palette, portrait sidebar, rounded information cards, experience timelines, and project gallery.
 
 ## Links
 
@@ -9,7 +9,7 @@ A professional personal curriculum vitae and portfolio website for **David Rey P
 
 ## Student information
 
-- **Student:** David Rey P. Bali-os
+- **Student:** David Rey Bali-os
 - **School:** Davao del Norte State College
 - **Program:** Bachelor of Science in Information Technology
 

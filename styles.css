@@ -173,7 +173,7 @@ h1 {
   font-weight: 400;
   margin-top: 21px;
   overflow-wrap: anywhere;
-  text-align: center;
+  text-align: left;
 }
 .profile-role {
   font-size: 13px;
@@ -182,7 +182,7 @@ h1 {
   margin-top: 13px;
   color: #4c4c4c;
   line-height: 1.65;
-  text-align: center;
+  text-align: left;
 }
 
 .profile-intro {
