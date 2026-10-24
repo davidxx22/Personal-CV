@@ -301,7 +301,6 @@ main {
   scroll-margin-top: 0;
 }
 .panel,
-.summary-card,
 .skill-card {
   background: var(--paper);
   border-radius: 20px;
@@ -329,41 +328,7 @@ main {
   color: #737373;
   white-space: nowrap;
 }
-.summary-card {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  padding: 26px 14px;
-}
-.summary-card > div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  border-right: 1px solid var(--line);
-  padding: 0 10px;
-}
-.summary-card > div:last-child {
-  border: 0;
-}
-.summary-card .icon {
-  width: 25px;
-  height: 25px;
-  color: #4b4b4b;
-  stroke-width: 1.1;
-  margin-bottom: 10px;
-}
-.summary-card strong {
-  font-size: 26px;
-  letter-spacing: -0.04em;
-  font-weight: 650;
-  line-height: 1.3;
-}
-.summary-card span {
-  font-size: 10px;
-  line-height: 1.45;
-  margin-top: 5px;
-  color: #626262;
-}
+
 .about-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -1176,15 +1141,7 @@ main {
   .about-grid p {
     font-size: 12px;
   }
-  .summary-card {
-    padding: 23px 10px;
-  }
-  .summary-card strong {
-    font-size: 23px;
-  }
-  .summary-card span {
-    font-size: 9px;
-  }
+
   .timeline article {
     grid-template-columns: 1fr;
     gap: 8px;
@@ -1355,19 +1312,7 @@ main {
   .panel-heading > span {
     font-size: 9px;
   }
-  .summary-card {
-    padding: 25px 8px;
-  }
-  .summary-card strong {
-    font-size: 27px;
-  }
-  .summary-card span {
-    font-size: 10px;
-  }
-  .summary-card .icon {
-    width: 23px;
-    height: 23px;
-  }
+
   .about-grid h3 {
     font-size: 25px;
   }
