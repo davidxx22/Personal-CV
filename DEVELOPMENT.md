@@ -16,7 +16,7 @@ The introduction identifies David and his focus. About explains his background a
 
 ## Moving around the page
 
-The navigation bar and mobile menu were removed at the student’s request. Visitors scroll through the CV or use the sidebar portfolio link and Back to top link. Contact links and project actions remain available.
+The navigation bar and mobile menu were removed at the student’s request. Visitors scroll through the CV or use the Back to top link. Contact links and project actions remain available.
 
 ## Project filters
 

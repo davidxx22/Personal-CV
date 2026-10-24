@@ -115,6 +115,6 @@ See [SUBMISSION-CHECKLIST.md](SUBMISSION-CHECKLIST.md) for browser checks, deplo
 
 On October 25, 2026, the site was redesigned around the approved black-and-white reference. The update adds a portrait/contact sidebar, white rounded panels, compact education and experience timelines, and grayscale project previews. All eight projects and existing accessible interactions remain. Responsive widths, mobile navigation, filtering, and keyboard dialog behavior were checked again after the redesign.
 
-The navigation bar and mobile menu were removed at the student’s request. The sidebar portfolio link, project links, contact links, and Back to top link remain available.
+The navigation bar and mobile menu were removed at the student’s request. Project links, contact links, and the Back to top link remain available.
 
 The current palette uses white page backgrounds and neutral gray accents. The profile portrait and project previews retain their original colors.
