@@ -43,7 +43,7 @@
 - [x] Production URL opens without a Vercel sign-in requirement.
 - [x] Styles, script, portrait, and all project previews load.
 - [x] Live mobile menu, filters, dialogs, navigation, and contact link targets checked.
-- [ ] Confirm a fresh push triggers deployment for future updates.
+- [x] Confirmed a fresh push triggers deployment for future updates.
 
 ## LMS submission
 
@@ -52,3 +52,9 @@
 - [ ] Open both copied links to confirm they work.
 - [ ] Submit both links in the required LMS activity.
 - [ ] Review DEVELOPMENT.md to prepare to explain the work.
+
+## October 25 monochrome redesign
+
+- [x] Black-and-white portrait sidebar and rounded information cards implemented.
+- [x] All eight project cards and repository links retained.
+- [x] Responsive widths, mobile navigation, filters, and keyboard dialogs checked again.

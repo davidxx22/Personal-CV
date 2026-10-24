@@ -1,6 +1,6 @@
 # Personal CV — David Rey P. Bali-os
 
-A professional personal curriculum vitae and portfolio website for **David Rey P. Bali-os**, a **Web Developer and UI/UX Designer** based in Sto. Tomas, Davao del Norte, Philippines. Built from scratch with a light background, purple accents, modern typography, portrait introduction, skill cards, and project gallery.
+A professional personal curriculum vitae and portfolio website for **David Rey P. Bali-os**, a **Web Developer and UI/UX Designer** based in Sto. Tomas, Davao del Norte, Philippines. Built from scratch with a black-and-white palette, portrait sidebar, rounded information cards, experience timelines, and project gallery.
 
 ## Links
 
@@ -16,7 +16,7 @@ A professional personal curriculum vitae and portfolio website for **David Rey P
 ## Technologies used
 
 - **HTML:** semantic content, sections, navigation, project cards, and accessible image descriptions.
-- **CSS:** responsive Grid/Flexbox layouts, purple palette, hover effects, print styles, and reduced-motion support.
+- **CSS:** responsive Grid/Flexbox layouts, monochrome palette, hover effects, print styles, and reduced-motion support.
 - **JavaScript:** mobile navigation, gallery filtering, project dialogs, active section links, section reveals, and footer year.
 - **Git and GitHub:** source control and meaningful development commits.
 - **Vercel:** public static website hosting.
@@ -107,6 +107,10 @@ Stage only the files changed for that update. Describe your actual work in the m
 
 ## Validation and submission
 
-Verified on October 24, 2026: anonymous access to the live website and public repository; successful responses for all 13 page assets; mobile navigation; individual/group/all filters; all eight project dialogs and preview images; keyboard Escape and focus restoration; and responsive previews at 320, 390, 768, 1024, and 1440 pixels without horizontal overflow. Actual-device review and email/phone application handling remain student checks.
+Verified on October 24, 2026: anonymous access to the live website and public repository; successful responses for all page assets; mobile navigation; individual/group/all filters; all eight project dialogs and preview images; keyboard Escape and focus restoration; and responsive previews at 320, 390, 768, 1024, and 1440 pixels without horizontal overflow. Actual-device review and email/phone application handling remain student checks.
 
 See [SUBMISSION-CHECKLIST.md](SUBMISSION-CHECKLIST.md) for browser checks, deployment verification, and the two links to submit to the LMS.
+
+## Monochrome redesign
+
+On October 25, 2026, the site was redesigned around the approved black-and-white reference. The update adds a portrait/contact sidebar, white rounded panels, compact education and experience timelines, and grayscale project previews. All eight projects and existing accessible interactions remain. Responsive widths, mobile navigation, filtering, and keyboard dialog behavior were checked again after the redesign.

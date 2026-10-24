@@ -2,7 +2,7 @@
 
 ## Design decisions
 
-The layout follows the reference's light surfaces, purple accents, navigation, introduction beside a portrait, About panel, cards, and gallery. Its content and implementation were created for David's approved CV rather than copied from a downloaded template.
+The redesigned layout follows the approved black-and-white reference: a portrait and contact sidebar, rounded white information cards on a pale canvas, compact timelines, and a project gallery. The grayscale treatment is applied through CSS, preserving the original image files. Its content and implementation were created for David's approved CV rather than copied from a downloaded template.
 
 The introduction identifies David and his focus. About explains his background and career objective. Skills show tools without unverified proficiency scores. Projects provide concrete examples. Journey combines education, relevant experience, and completed training. Contact provides email, phone, and profile links.
 
@@ -10,7 +10,7 @@ The introduction identifies David and his focus. About explains his background a
 
 `index.html` contains the structure and content: one main heading, section headings, eight project cards, local images, and actual links. Keeping content in HTML lets visitors read it and follow links if JavaScript is unavailable.
 
-`styles.css` controls presentation. Variables in `:root` hold the palette. CSS Grid arranges the hero, skills, projects, and journey; Flexbox aligns navigation and buttons. Media queries change columns and spacing on narrower screens. The gallery becomes one column and navigation becomes a toggle menu on phones.
+`styles.css` controls presentation. Variables in `:root` hold the palette. CSS Grid arranges the sidebar/content shell, skills, projects, and timeline entries; Flexbox aligns navigation and buttons. Media queries change columns and spacing on narrower screens. The sidebar stacks above the content, the gallery becomes one column, and navigation becomes a toggle menu on phones. The desktop profile sidebar has its own scroll area so every contact link remains reachable on short screens.
 
 `script.js` adds interactions after content loads. The `defer` attribute lets the HTML finish parsing before the script accesses elements.
 
@@ -43,7 +43,7 @@ The native `dialog` element provides modal keyboard behavior. Escape closes it, 
 
 ## Preparing for the instructor discussion
 
-Be ready to explain how the interview shaped the content; why the light and purple layout suits the reference; how semantic HTML, Grid, Flexbox, and media queries create the design; how filters, dialogs, and mobile navigation work; and how accessibility choices improve usability.
+Be ready to explain how the interview shaped the content; why the monochrome sidebar and card layout suits the new reference; how semantic HTML, Grid, Flexbox, and media queries create the design; how filters, dialogs, and mobile navigation work; and how accessibility choices improve usability.
 
 GitHub stores the source and history; Vercel hosts the public website. Real commits record setup, implementation, interactions, and documentation/deployment work. Inspect them with:
 
