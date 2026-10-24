@@ -6,7 +6,7 @@
   --muted: #686071;
   --line: #e7e0ef;
   --paper: #ffffff;
-  --canvas: #f8f6fc;
+  --canvas: #ffffff;
   --soft: #f2edf8;
   --shadow: 0 3px 15px #49346708;
 }
@@ -20,7 +20,7 @@ html {
 body {
   margin: 0;
   padding: 30px 24px;
-  background: #e9e0f3;
+  background: #ffffff;
   color: var(--ink);
   font-family: "Segoe UI", Arial, sans-serif;
   font-size: 14px;
