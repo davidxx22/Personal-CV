@@ -1,6 +1,6 @@
 # Personal CV — David Rey Bali-os
 
-A professional personal curriculum vitae and portfolio website for **David Rey Bali-os**, a **Web Developer and UI/UX Designer** based in Sto. Tomas, Davao del Norte, Philippines. Built from scratch with a light-and-purple palette, portrait sidebar, rounded information cards, experience timelines, and project gallery.
+A professional personal curriculum vitae and portfolio website for **David Rey Bali-os**, a **Web Developer and UI/UX Designer** based in Sto. Tomas, Davao del Norte, Philippines. Built from scratch with a light neutral palette, portrait sidebar, rounded information cards, experience timelines, and project gallery.
 
 ## Links
 
@@ -16,7 +16,7 @@ A professional personal curriculum vitae and portfolio website for **David Rey B
 ## Technologies used
 
 - **HTML:** semantic content, sections, navigation, project cards, and accessible image descriptions.
-- **CSS:** responsive Grid/Flexbox layouts, purple palette, hover effects, print styles, and reduced-motion support.
+- **CSS:** responsive Grid/Flexbox layouts, neutral palette, hover effects, print styles, and reduced-motion support.
 - **JavaScript:** gallery filtering, project dialogs, adaptive sidebar positioning, section reveals, and footer year.
 - **Git and GitHub:** source control and meaningful development commits.
 - **Vercel:** public static website hosting.
@@ -117,4 +117,4 @@ On October 25, 2026, the site was redesigned around the approved black-and-white
 
 The navigation bar and mobile menu were removed at the student’s request. The sidebar portfolio link, project links, contact links, and Back to top link remain available.
 
-The current palette uses white page backgrounds and purple accents. The profile portrait and project previews retain their original colors.
+The current palette uses white page backgrounds and neutral gray accents. The profile portrait and project previews retain their original colors.

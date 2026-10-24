@@ -2,7 +2,7 @@
 
 ## Design decisions
 
-The redesigned layout uses the reference’s portrait and contact sidebar, rounded information cards, compact timelines, and project gallery, with the student’s requested light-and-purple palette. The portrait and project images retain their original colors. Its content and implementation were created for David's approved CV rather than copied from a downloaded template.
+The redesigned layout uses the reference’s portrait and contact sidebar, rounded information cards, compact timelines, and project gallery, with the student’s requested light neutral palette. The portrait and project images retain their original colors. Its content and implementation were created for David's approved CV rather than copied from a downloaded template.
 
 The introduction identifies David and his focus. About explains his background and career objective. Skills show tools without unverified proficiency scores. Projects provide concrete examples. Journey combines education, relevant experience, and completed training. Contact provides email, phone, and profile links.
 
@@ -43,7 +43,7 @@ The native `dialog` element provides modal keyboard behavior. Escape closes it, 
 
 ## Preparing for the instructor discussion
 
-Be ready to explain how the interview shaped the content; how the sidebar and card layout adapts the reference with purple accents; how semantic HTML, Grid, Flexbox, and media queries create the design; how filters, dialogs, and sidebar positioning work; and how accessibility choices improve usability.
+Be ready to explain how the interview shaped the content; how the sidebar and card layout adapts the reference with neutral gray accents; how semantic HTML, Grid, Flexbox, and media queries create the design; how filters, dialogs, and sidebar positioning work; and how accessibility choices improve usability.
 
 GitHub stores the source and history; Vercel hosts the public website. Real commits record setup, implementation, interactions, and documentation/deployment work. Inspect them with:
 
