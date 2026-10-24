@@ -118,3 +118,7 @@ On October 25, 2026, the site was redesigned around the approved black-and-white
 The navigation bar and mobile menu were removed at the student’s request. Project links, contact links, and the Back to top link remain available.
 
 The current palette uses white page backgrounds and neutral gray accents. The profile portrait and project previews retain their original colors.
+
+## Technology logos
+
+The skill-card logos are local SVG files from [Devicon](https://github.com/devicons/devicon). The MIT license is included in `assets/icons/LICENSE-devicon.txt`. The logos identify their respective technologies and tools; visible text labels remain alongside each image.
