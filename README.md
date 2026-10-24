@@ -121,4 +121,4 @@ The current palette uses white page backgrounds and neutral gray accents. The pr
 
 ## Technology logos
 
-The skill-card logos are local SVG files from [Devicon](https://github.com/devicons/devicon). The MIT license is included in `assets/icons/LICENSE-devicon.txt`. The logos identify their respective technologies and tools; visible text labels remain alongside each image.
+The skill-card SVG logos are local files from [Devicon](https://github.com/devicons/devicon). Liquid’s water-drop icon is from [Shopify’s official Liquid documentation](https://shopify.github.io/liquid/). The MIT license is included in `assets/icons/LICENSE-devicon.txt`. The logos identify their respective technologies and tools; visible text labels remain alongside each image.
