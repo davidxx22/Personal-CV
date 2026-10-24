@@ -167,7 +167,7 @@ ul {
 h1 {
   font-family: Impact, "Arial Narrow", "Helvetica Neue", sans-serif;
   font-stretch: condensed;
-  font-size: 49px;
+  font-size: 45px;
   line-height: 1.03;
   letter-spacing: -0.015em;
   font-weight: 400;
@@ -1116,7 +1116,7 @@ main {
     padding: 20px 17px;
   }
   h1 {
-    font-size: 44px;
+    font-size: 40px;
   }
 
   .panel {
@@ -1190,7 +1190,7 @@ main {
     padding: 18px 15px;
   }
   h1 {
-    font-size: 39px;
+    font-size: 36px;
   }
 
   .panel {
@@ -1339,7 +1339,7 @@ main {
     object-position: 50% 26%;
   }
   h1 {
-    font-size: clamp(46px, 12vw, 70px);
+    font-size: clamp(42px, 11vw, 64px);
     margin-top: 23px;
   }
 
@@ -1518,7 +1518,7 @@ main {
     padding: 22px 20px;
   }
   h1 {
-    font-size: 45px;
+    font-size: 41px;
   }
 
   .profile-intro {
