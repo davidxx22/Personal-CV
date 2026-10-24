@@ -8,7 +8,7 @@
   --paper: #ffffff;
   --canvas: #ffffff;
   --soft: #f2edf8;
-  --shadow: 0 3px 15px #49346708;
+  --shadow: none;
 }
 * {
   box-sizing: border-box;
@@ -132,7 +132,7 @@ ul {
   background: var(--canvas);
   border-radius: 28px;
   padding: 20px 20px 0;
-  box-shadow: 0 25px 80px #44246c18;
+  box-shadow: none;
 }
 
 .resume-shell {
@@ -273,7 +273,7 @@ h1 {
   place-items: center;
   font-size: 17px;
   font-weight: 650;
-  box-shadow: 0 2px 4px #00000005;
+  box-shadow: none;
   transition:
     background 0.2s,
     color 0.2s;
@@ -508,7 +508,7 @@ main {
 }
 .skill-card:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 20px #00000006;
+  box-shadow: none;
 }
 .skill-card-top {
   display: flex;
@@ -652,7 +652,7 @@ main {
 }
 .project-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 20px #00000009;
+  box-shadow: none;
 }
 .project-image {
   display: block;
