@@ -3,7 +3,7 @@
 ## Required links
 
 - GitHub repository: https://github.com/davidxx22/Personal-CV
-- Public Vercel website: add the verified production URL after deployment.
+- Public Vercel website: https://david-balios-cv.vercel.app/
 
 ## Content
 
@@ -23,7 +23,7 @@
 - [x] Mobile menu opens, closes, and navigates to a section.
 - [x] Group filter shows five projects.
 - [x] Project details open; Escape closes them and restores focus.
-- [ ] Finish individual/all filtering and remaining image checks.
+- [x] Individual/all filters show three/eight projects; all eight dialog previews load.
 - [ ] Review on an actual phone and another desktop browser.
 - [ ] Check reduced motion using device/browser accessibility preferences.
 - [ ] Open email and phone links using your configured apps.
@@ -31,18 +31,18 @@
 
 ## GitHub
 
-- [ ] Source pushed to the public `Personal-CV` repository.
-- [ ] README includes student name, description, technologies, and live link.
-- [ ] Multiple meaningful commits visible.
-- [ ] Repository accessible while signed out.
+- [x] Source pushed to the public `Personal-CV` repository.
+- [x] README includes student name, description, technologies, and live link.
+- [x] Multiple meaningful commits visible.
+- [x] Repository accessible without authentication.
 
 ## Vercel
 
-- [ ] Correct repository imported with Other/static configuration.
-- [ ] Production deployment is Ready.
-- [ ] Production URL opens without a Vercel sign-in requirement.
-- [ ] Styles, script, portrait, and all project previews load.
-- [ ] Repeat menu, gallery, dialog, navigation, and contact checks live.
+- [x] Correct repository imported with Other/static configuration.
+- [x] Initial production deployment completed successfully.
+- [x] Production URL opens without a Vercel sign-in requirement.
+- [x] Styles, script, portrait, and all project previews load.
+- [x] Live mobile menu, filters, dialogs, navigation, and contact link targets checked.
 - [ ] Confirm a fresh push triggers deployment for future updates.
 
 ## LMS submission

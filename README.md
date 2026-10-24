@@ -5,7 +5,7 @@ A professional personal curriculum vitae and portfolio website for **David Rey P
 ## Links
 
 - GitHub repository: https://github.com/davidxx22/Personal-CV
-- Live Vercel website: deployment in progress; the verified URL will be added after deployment.
+- Live Vercel website: https://david-balios-cv.vercel.app/
 
 ## Student information
 
@@ -106,5 +106,7 @@ Stage only the files changed for that update. Describe your actual work in the m
 - Both Cisco entries are completed Networking Academy courses, not a claim of full CCNA certification. No certificate files or download links are available.
 
 ## Validation and submission
+
+Verified on October 24, 2026: anonymous access to the live website and public repository; successful responses for all 13 page assets; mobile navigation; individual/group/all filters; all eight project dialogs and preview images; keyboard Escape and focus restoration; and responsive previews at 320, 390, 768, 1024, and 1440 pixels without horizontal overflow. Actual-device review and email/phone application handling remain student checks.
 
 See [SUBMISSION-CHECKLIST.md](SUBMISSION-CHECKLIST.md) for browser checks, deployment verification, and the two links to submit to the LMS.
