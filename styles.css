@@ -150,24 +150,7 @@ ul {
   top: var(--profile-top, min(24px, calc(100dvh - 1026px)));
   box-shadow: var(--shadow);
 }
-.profile-kicker {
-  display: flex;
-  align-items: center;
-  gap: 7px;
-  font-size: 7px;
-  letter-spacing: 0.12em;
-  color: #272727;
-  font-weight: 600;
-  margin-bottom: 15px;
-  white-space: nowrap;
-}
-.profile-kicker > span {
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background: var(--accent);
-  box-shadow: 0 0 0 3px #f1f1f1;
-}
+
 .profile-photo {
   overflow: hidden;
   border-radius: 16px;
@@ -190,25 +173,23 @@ h1 {
   font-weight: 400;
   margin-top: 21px;
   overflow-wrap: anywhere;
+  text-align: center;
 }
 .profile-role {
-  font-size: 7px;
-  letter-spacing: 0.18em;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
   margin-top: 13px;
   color: #4c4c4c;
-  line-height: 1.8;
+  line-height: 1.65;
+  text-align: center;
 }
-.profile-divider {
-  display: block;
-  height: 2px;
-  width: 18px;
-  background: #d1d1d1;
-  margin: 21px 0 17px;
-}
+
 .profile-intro {
   font-size: 11px;
   line-height: 1.9;
   color: #535353;
+  margin-top: 22px;
 }
 .sidebar-block {
   margin-top: 26px;
@@ -1014,8 +995,6 @@ main {
     opacity 0.5s ease,
     transform 0.5s ease;
 }
-
-.profile-kicker,
 .profile-role,
 .sidebar-block h2,
 .panel-heading h2,
@@ -1028,9 +1007,7 @@ main {
 .detail-button {
   color: var(--accent-dark);
 }
-.profile-divider {
-  background: #d4bcef;
-}
+
 .timeline::before {
   background: #ddcbed;
 }
@@ -1140,12 +1117,7 @@ main {
   h1 {
     font-size: 44px;
   }
-  .profile-kicker {
-    font-size: 6px;
-  }
-  .profile-role {
-    font-size: 6px;
-  }
+
   .panel {
     padding: 24px;
   }
@@ -1357,10 +1329,7 @@ main {
     overflow: visible;
     padding: 25px;
   }
-  .profile-kicker {
-    font-size: 8px;
-    margin-bottom: 20px;
-  }
+
   .profile-photo {
     aspect-ratio: 1.08;
     border-radius: 15px;
@@ -1372,9 +1341,7 @@ main {
     font-size: clamp(46px, 12vw, 70px);
     margin-top: 23px;
   }
-  .profile-role {
-    font-size: 8px;
-  }
+
   .profile-intro {
     font-size: 13px;
     line-height: 1.9;
@@ -1552,12 +1519,7 @@ main {
   h1 {
     font-size: 45px;
   }
-  .profile-kicker {
-    font-size: 6px;
-  }
-  .profile-role {
-    font-size: 6px;
-  }
+
   .profile-intro {
     font-size: 12px;
   }
