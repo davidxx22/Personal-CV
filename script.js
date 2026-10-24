@@ -51,6 +51,20 @@ document.addEventListener("click", (event) => {
 mobileQuery.addEventListener("change", synchronizeMenu);
 synchronizeMenu();
 
+const profileSidebar = document.querySelector(".profile-sidebar");
+
+function positionProfileSidebar() {
+  const height = profileSidebar.getBoundingClientRect().height;
+  const top = Math.min(88, window.innerHeight - height - 24);
+  profileSidebar.style.setProperty("--profile-top", `${top}px`);
+}
+
+positionProfileSidebar();
+window.addEventListener("resize", positionProfileSidebar);
+if ("ResizeObserver" in window) {
+  new ResizeObserver(positionProfileSidebar).observe(profileSidebar);
+}
+
 const filterBar = document.querySelector(".project-filters");
 const filterButtons = [...filterBar.querySelectorAll("button")];
 const projectCards = [...document.querySelectorAll(".project-card")];

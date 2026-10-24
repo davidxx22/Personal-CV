@@ -10,7 +10,7 @@ The introduction identifies David and his focus. About explains his background a
 
 `index.html` contains the structure and content: one main heading, section headings, eight project cards, local images, and actual links. Keeping content in HTML lets visitors read it and follow links if JavaScript is unavailable.
 
-`styles.css` controls presentation. Variables in `:root` hold the palette. CSS Grid arranges the sidebar/content shell, skills, projects, and timeline entries; Flexbox aligns navigation and buttons. Media queries change columns and spacing on narrower screens. The sidebar stacks above the content, the gallery becomes one column, and navigation becomes a toggle menu on phones. The desktop profile sidebar has its own scroll area so every contact link remains reachable on short screens.
+`styles.css` controls presentation. Variables in `:root` hold the palette. CSS Grid arranges the sidebar/content shell, skills, projects, and timeline entries; Flexbox aligns navigation and buttons. Media queries change columns and spacing on narrower screens. The sidebar stacks above the content, the gallery becomes one column, and navigation becomes a toggle menu on phones. On desktop, the profile scrolls naturally with the page before sticking near the bottom of the viewport. A small ResizeObserver adjustment keeps all its contact links reachable on short screens without a separate scrollbar.
 
 `script.js` adds interactions after content loads. The `defer` attribute lets the HTML finish parsing before the script accesses elements.
 

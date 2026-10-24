@@ -220,11 +220,7 @@ ul {
   border: 1px solid #ededed;
   border-radius: 20px;
   position: sticky;
-  top: 88px;
-  max-height: calc(100dvh - 110px);
-  overflow-y: auto;
-  scrollbar-width: thin;
-  scrollbar-color: #dadada transparent;
+  top: var(--profile-top, min(88px, calc(100dvh - 1026px)));
   box-shadow: var(--shadow);
 }
 .profile-kicker {
