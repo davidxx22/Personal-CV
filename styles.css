@@ -509,12 +509,8 @@ main {
   place-items: center;
   width: 29px;
   height: 29px;
-  border-radius: 7px;
-  font-weight: 650;
-  font-size: 12px;
-  background: #f0f0f0;
-  border: 1px solid #e4e4e4;
-  color: #242424;
+  background: transparent;
+  border: 0;
 }
 .tool-mark img {
   width: 22px;
@@ -1020,49 +1016,6 @@ main {
 }
 .financify-preview .app-preview-label {
   color: #4e6631;
-}
-.html-mark {
-  background: #fff0e6;
-  color: #ad4115;
-  border-color: #f6decf;
-}
-.css-mark {
-  background: #e9f1ff;
-  color: #1c5ca7;
-  border-color: #dbe6f6;
-}
-.js-mark {
-  background: #fff5c4;
-  color: #715600;
-  border-color: #f0e5ac;
-}
-.figma-mark {
-  background: #f0f0f0;
-  color: #333333;
-  border-color: #dddddd;
-}
-.canva-mark {
-  background: #def7f5;
-  color: #007b7e;
-  border-color: #c9ebe8;
-}
-.ps-mark {
-  background: #153755;
-  color: #8bceff;
-  border-color: #153755;
-}
-.vscode-mark {
-  background: #e3f2ff;
-  color: #0069a9;
-  border-color: #cee5f6;
-}
-.github-mark {
-  background: #efefef;
-  color: #333333;
-}
-.vercel-mark {
-  background: #eeeeee;
-  color: #292929;
 }
 .dialog-note {
   background: var(--accent-soft);
