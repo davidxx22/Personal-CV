@@ -1,3 +1,52 @@
+const themeToggle = document.querySelector(".theme-toggle");
+const themeRoot = document.documentElement;
+const systemTheme = window.matchMedia("(prefers-color-scheme: dark)");
+
+function applyTheme(theme) {
+  themeRoot.dataset.theme = theme;
+  themeRoot.style.colorScheme = theme;
+  themeToggle.setAttribute("aria-pressed", String(theme === "dark"));
+  themeToggle.title =
+    theme === "dark" ? "Switch to light mode" : "Switch to dark mode";
+  document.querySelector('meta[name="theme-color"]').content =
+    theme === "dark" ? "#17131f" : "#7445d4";
+}
+
+function followThemePreference() {
+  const preference = themeRoot.dataset.themePreference;
+  applyTheme(
+    preference === "light" || preference === "dark"
+      ? preference
+      : systemTheme.matches
+        ? "dark"
+        : "light",
+  );
+}
+
+followThemePreference();
+themeToggle.hidden = false;
+themeToggle.addEventListener("click", () => {
+  const theme = themeRoot.dataset.theme === "dark" ? "light" : "dark";
+  themeRoot.dataset.themePreference = theme;
+  applyTheme(theme);
+  try {
+    localStorage.setItem("cv-theme", theme);
+  } catch {}
+});
+
+systemTheme.addEventListener("change", () => {
+  if (themeRoot.dataset.themePreference === "system") followThemePreference();
+});
+
+window.addEventListener("storage", (event) => {
+  if (event.key !== "cv-theme" && event.key !== null) return;
+  themeRoot.dataset.themePreference =
+    event.newValue === "light" || event.newValue === "dark"
+      ? event.newValue
+      : "system";
+  followThemePreference();
+});
+
 const profileSidebar = document.querySelector(".profile-sidebar");
 
 function positionProfileSidebar() {

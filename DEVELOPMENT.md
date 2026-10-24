@@ -18,6 +18,10 @@ The introduction identifies David and his focus. About explains his background a
 
 The navigation bar and mobile menu were removed at the student’s request. Visitors scroll through the CV or use the sidebar portfolio link and Back to top link. Contact links and project actions remain available.
 
+## Light and dark themes
+
+The floating moon/sun button toggles the theme and exposes its current state through `aria-pressed`. `theme.js` runs before the stylesheet to apply a saved choice without flashing the wrong background. Before a choice is saved, the site follows `prefers-color-scheme` and responds to device preference changes. Selecting a theme saves it as `cv-theme` in localStorage; if storage is blocked, the toggle still works for the current page. Storage events synchronize other open tabs. Clearing that preference returns the site to the device theme. CSS variables and targeted dark styles keep text, cards, dialogs, and controls readable without altering image colors. Printed pages use light surfaces, and the theme control is hidden in print.
+
 ## Project filters
 
 Each project has a `data-category`: `individual` or `group`. Buttons compare that value with their `data-filter` value and set unmatched cards to `hidden`. Status text announces the visible count. There are three individual and five group projects.

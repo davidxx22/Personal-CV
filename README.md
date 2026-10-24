@@ -30,6 +30,7 @@ No application framework, package installation, build command, or environment va
 - Repository and website/project-page links for every project.
 - Native project dialogs with keyboard focus management and Escape-to-close behavior.
 - Subtle hover effects, smooth scrolling, and section reveals respecting reduced-motion preferences.
+- A keyboard-accessible light/dark toggle that remembers the visitor’s choice and follows their device preference until they select a theme.
 - Skip link, visible keyboard focus, image descriptions, and semantic headings.
 - Education, experience, completed courses, and working contact links.
 - Content and project links remain available without JavaScript.
@@ -41,6 +42,7 @@ Personal CV/
 ├── index.html
 ├── styles.css
 ├── script.js
+├── theme.js
 ├── vercel.json
 ├── README.md
 ├── DEVELOPMENT.md
@@ -65,6 +67,7 @@ Open http://127.0.0.1:5500. Stop the server with **Ctrl+C**. Python only serves 
 
 - **Text, project cards, contact links, and education:** edit `index.html`.
 - **Colors, spacing, typography, animations, and breakpoints:** edit `styles.css`. Shared colors are in `:root`.
+- **Theme startup:** `theme.js` applies the saved or device theme before styles load. The main `script.js` handles the toggle and preference changes.
 - **Project dialog descriptions and behavior:** edit `script.js`. Longer descriptions are in `details`. Keep a card's `data-project` and its button's `data-details` consistent with the matching key.
 - **Portrait and previews:** replace files in `assets/`; update paths, image descriptions, and dimensions as needed.
 - **New projects:** duplicate a project article, update its content, add a matching detail description, and update the gallery count/label.

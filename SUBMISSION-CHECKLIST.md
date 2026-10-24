@@ -45,6 +45,14 @@
 - [x] Live mobile menu, filters, dialogs, navigation, and contact link targets checked.
 - [x] Confirmed a fresh push triggers deployment for future updates.
 
+## Theme switching
+
+- [x] Theme initially follows the device preference when no choice is saved.
+- [x] Light and dark choices persist after reload.
+- [x] Toggle works by keyboard and exposes its pressed state.
+- [x] Dark project dialogs have readable text and dark surfaces.
+- [x] Mobile toggle remains usable without horizontal overflow.
+
 ## LMS submission
 
 - [ ] Copy the final public Vercel website URL.
