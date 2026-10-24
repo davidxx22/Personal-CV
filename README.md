@@ -117,4 +117,4 @@ On October 25, 2026, the site was redesigned around the approved black-and-white
 
 The navigation bar and mobile menu were removed at the student’s request. The sidebar portfolio link, project links, contact links, and Back to top link remain available.
 
-The current palette uses lavender surfaces and purple accents. Project previews retain their original colors; only the profile portrait uses a grayscale CSS filter.
+The current palette uses lavender surfaces and purple accents. The profile portrait and project previews retain their original colors.

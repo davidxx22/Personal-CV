@@ -2,7 +2,7 @@
 
 ## Design decisions
 
-The redesigned layout uses the reference’s portrait and contact sidebar, rounded information cards, compact timelines, and project gallery, with the student’s requested light-and-purple palette. Only the portrait is grayscale; project images retain their original colors. Image treatment is applied through CSS, preserving the original files. Its content and implementation were created for David's approved CV rather than copied from a downloaded template.
+The redesigned layout uses the reference’s portrait and contact sidebar, rounded information cards, compact timelines, and project gallery, with the student’s requested light-and-purple palette. The portrait and project images retain their original colors. Its content and implementation were created for David's approved CV rather than copied from a downloaded template.
 
 The introduction identifies David and his focus. About explains his background and career objective. Skills show tools without unverified proficiency scores. Projects provide concrete examples. Journey combines education, relevant experience, and completed training. Contact provides email, phone, and profile links.
 

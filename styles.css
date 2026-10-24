@@ -179,7 +179,7 @@ ul {
   height: 100%;
   object-fit: cover;
   object-position: center 22%;
-  filter: grayscale(1);
+  filter: none;
 }
 h1 {
   font-family: Impact, "Arial Narrow", "Helvetica Neue", sans-serif;
