@@ -10,13 +10,13 @@ The introduction identifies David and his focus. About explains his background a
 
 `index.html` contains the structure and content: one main heading, section headings, eight project cards, local images, and actual links. Keeping content in HTML lets visitors read it and follow links if JavaScript is unavailable.
 
-`styles.css` controls presentation. Variables in `:root` hold the palette. CSS Grid arranges the sidebar/content shell, skills, projects, and timeline entries; Flexbox aligns navigation and buttons. Media queries change columns and spacing on narrower screens. The sidebar stacks above the content, the gallery becomes one column, and navigation becomes a toggle menu on phones. On desktop, the profile scrolls naturally with the page before sticking near the bottom of the viewport. A small ResizeObserver adjustment keeps all its contact links reachable on short screens without a separate scrollbar.
+`styles.css` controls presentation. Variables in `:root` hold the palette. CSS Grid arranges the sidebar/content shell, skills, projects, and timeline entries; Flexbox aligns navigation and buttons. Media queries change columns and spacing on narrower screens. The sidebar stacks above the content, the gallery becomes one column, without a navigation bar on any screen size. On desktop, the profile scrolls naturally with the page before sticking near the bottom of the viewport. A small ResizeObserver adjustment keeps all its contact links reachable on short screens without a separate scrollbar.
 
 `script.js` adds interactions after content loads. The `defer` attribute lets the HTML finish parsing before the script accesses elements.
 
-## Mobile navigation
+## Moving around the page
 
-The toggle changes `aria-expanded`, its accessible label, and the navigation's open class. Closed mobile navigation is inert, so hidden links cannot receive keyboard focus. Selecting a link, clicking outside, or pressing Escape closes it. A media query listener updates navigation when the browser crosses the mobile breakpoint.
+The navigation bar and mobile menu were removed at the student’s request. Visitors scroll through the CV or use the sidebar portfolio link and Back to top link. Contact links and project actions remain available.
 
 ## Project filters
 
@@ -28,9 +28,9 @@ Detail buttons identify entries in `details`. The script uses card content to bu
 
 The native `dialog` element provides modal keyboard behavior. Escape closes it, scrolling behind it is locked, and focus returns to the opening button. Browsers without dialog support retain normal project content and links.
 
-## Reveals and navigation state
+## Section reveals
 
-`IntersectionObserver` checks when sections enter the viewport. It reveals content once and updates the current navigation link. Content remains visible if observers are unavailable. Visitors requesting reduced motion receive content without reveal movement or smooth scrolling.
+`IntersectionObserver` checks when sections enter the viewport. It reveals content once. Content remains visible if observers are unavailable. Visitors requesting reduced motion receive content without reveal movement or smooth scrolling.
 
 ## Accessibility choices
 
@@ -43,7 +43,7 @@ The native `dialog` element provides modal keyboard behavior. Escape closes it, 
 
 ## Preparing for the instructor discussion
 
-Be ready to explain how the interview shaped the content; why the monochrome sidebar and card layout suits the new reference; how semantic HTML, Grid, Flexbox, and media queries create the design; how filters, dialogs, and mobile navigation work; and how accessibility choices improve usability.
+Be ready to explain how the interview shaped the content; why the monochrome sidebar and card layout suits the new reference; how semantic HTML, Grid, Flexbox, and media queries create the design; how filters, dialogs, and sidebar positioning work; and how accessibility choices improve usability.
 
 GitHub stores the source and history; Vercel hosts the public website. Real commits record setup, implementation, interactions, and documentation/deployment work. Inspect them with:
 

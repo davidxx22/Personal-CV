@@ -12,7 +12,7 @@
 }
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 100px;
+  scroll-padding-top: 24px;
 }
 body {
   margin: 0;
@@ -128,86 +128,10 @@ ul {
   margin: 0 auto;
   background: var(--canvas);
   border-radius: 28px;
-  padding: 0 20px 0;
+  padding: 20px 20px 0;
   box-shadow: 0 25px 80px #0002;
 }
-.site-header {
-  position: sticky;
-  top: 0;
-  z-index: 25;
-  background: #f6f6f6f5;
-  backdrop-filter: blur(12px);
-  border-radius: 28px 28px 0 0;
-}
-.header-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-  min-height: 72px;
-}
-.brand {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 10px;
-  letter-spacing: 0.08em;
-  font-weight: 650;
-}
-.brand-mark {
-  display: grid;
-  place-content: center;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background: #191919;
-  color: white;
-  font-size: 23px;
-  font-weight: 750;
-  letter-spacing: -0.07em;
-  line-height: 1;
-}
-.brand-mark > span {
-  display: none;
-}
-.brand-dot {
-  color: #676767;
-  font-weight: 400;
-}
-.main-nav {
-  display: flex;
-  align-items: center;
-  gap: 23px;
-  font-size: 11px;
-  font-weight: 500;
-}
-.main-nav a {
-  color: #666;
-  transition: color 0.2s;
-  padding: 7px 0;
-}
-.main-nav a:hover,
-.main-nav a[aria-current] {
-  color: #111;
-  text-decoration: underline;
-  text-underline-offset: 6px;
-}
-.main-nav .nav-contact {
-  display: flex;
-  gap: 12px;
-  align-items: center;
-  color: #111;
-  border: 1px solid #d5d5d5;
-  border-radius: 6px;
-  padding: 8px 12px;
-}
-.nav-contact .icon {
-  width: 15px;
-  height: 15px;
-}
-.menu-toggle {
-  display: none;
-}
+
 .resume-shell {
   display: grid;
   grid-template-columns: 260px minmax(0, 1fr);
@@ -220,7 +144,7 @@ ul {
   border: 1px solid #ededed;
   border-radius: 20px;
   position: sticky;
-  top: var(--profile-top, min(88px, calc(100dvh - 1026px)));
+  top: var(--profile-top, min(24px, calc(100dvh - 1026px)));
   box-shadow: var(--shadow);
 }
 .profile-kicker {
@@ -1154,9 +1078,7 @@ main {
   .panel {
     padding: 24px;
   }
-  .main-nav {
-    gap: 18px;
-  }
+
   .about-grid {
     gap: 22px;
   }
@@ -1226,13 +1148,7 @@ main {
   h1 {
     font-size: 39px;
   }
-  .brand-dot {
-    display: none;
-  }
-  .main-nav {
-    font-size: 10px;
-    gap: 16px;
-  }
+
   .panel {
     padding: 23px 21px;
   }
@@ -1355,93 +1271,23 @@ main {
 }
 @media (max-width: 700px) {
   html {
-    scroll-padding-top: 86px;
+    scroll-padding-top: 24px;
   }
   body {
     padding: 10px;
     font-size: 14px;
   }
   .page-frame {
-    padding: 0 12px;
+    padding: 12px 12px 0;
     border-radius: 20px;
   }
-  .site-header {
-    border-radius: 20px 20px 0 0;
-  }
-  .header-inner {
-    min-height: 65px;
-  }
-  .brand {
-    font-size: 9px;
-  }
-  .brand-dot {
-    display: inline;
-    font-size: 7px;
-  }
-  .menu-toggle {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 6px;
-    height: 40px;
-    width: 40px;
-    background: #ececec;
-    border-radius: 9px;
-  }
-  .menu-toggle span {
-    display: block;
-    width: 18px;
-    height: 1px;
-    background: #222;
-    transition: transform 0.2s;
-  }
-  .menu-toggle[aria-expanded="true"] span:first-child {
-    transform: translateY(3.5px) rotate(45deg);
-  }
-  .menu-toggle[aria-expanded="true"] span:last-child {
-    transform: translateY(-3.5px) rotate(-45deg);
-  }
-  .main-nav {
-    position: absolute;
-    top: 65px;
-    left: -12px;
-    right: -12px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    background: #f6f6f6;
-    padding: 16px;
-    gap: 15px;
-    font-size: 12px;
-    border-bottom: 1px solid #ddd;
-  }
-  .js-ready .main-nav {
-    display: none;
-  }
-  .js-ready .main-nav.is-open {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    gap: 0;
-    box-shadow: 0 15px 25px #00000009;
-  }
-  .main-nav a {
-    padding: 12px;
-  }
-  .main-nav .nav-contact {
-    justify-content: space-between;
-    margin-top: 8px;
-    padding: 11px 12px;
-  }
+
   .resume-shell {
     grid-template-columns: 1fr;
     gap: 18px;
-    padding-top: 56px;
-  }
-  .js-ready .resume-shell {
     padding-top: 0;
   }
+
   .profile-sidebar {
     position: static;
     max-height: none;
@@ -1648,9 +1494,6 @@ main {
   }
 }
 @media (max-width: 370px) {
-  .brand-dot {
-    display: none;
-  }
   .profile-sidebar,
   .panel {
     padding: 22px 20px;
@@ -1729,7 +1572,6 @@ main {
     box-shadow: none;
     border-radius: 0;
   }
-  .site-header,
   .project-toolbar,
   .project-actions,
   .sidebar-portfolio,

@@ -17,7 +17,7 @@ A professional personal curriculum vitae and portfolio website for **David Rey P
 
 - **HTML:** semantic content, sections, navigation, project cards, and accessible image descriptions.
 - **CSS:** responsive Grid/Flexbox layouts, monochrome palette, hover effects, print styles, and reduced-motion support.
-- **JavaScript:** mobile navigation, gallery filtering, project dialogs, active section links, section reveals, and footer year.
+- **JavaScript:** gallery filtering, project dialogs, adaptive sidebar positioning, section reveals, and footer year.
 - **Git and GitHub:** source control and meaningful development commits.
 - **Vercel:** public static website hosting.
 
@@ -25,7 +25,7 @@ No application framework, package installation, build command, or environment va
 
 ## Features
 
-- Responsive desktop, laptop, tablet, and mobile layouts with usable mobile navigation.
+- Responsive desktop, laptop, tablet, and mobile layouts with a portrait sidebar and no navigation bar.
 - Eight completed projects, filterable into individual and group work.
 - Repository and website/project-page links for every project.
 - Native project dialogs with keyboard focus management and Escape-to-close behavior.
@@ -114,3 +114,5 @@ See [SUBMISSION-CHECKLIST.md](SUBMISSION-CHECKLIST.md) for browser checks, deplo
 ## Monochrome redesign
 
 On October 25, 2026, the site was redesigned around the approved black-and-white reference. The update adds a portrait/contact sidebar, white rounded panels, compact education and experience timelines, and grayscale project previews. All eight projects and existing accessible interactions remain. Responsive widths, mobile navigation, filtering, and keyboard dialog behavior were checked again after the redesign.
+
+The navigation bar and mobile menu were removed at the student’s request. The sidebar portfolio link, project links, contact links, and Back to top link remain available.

@@ -1,61 +1,8 @@
-const menuToggle = document.querySelector(".menu-toggle");
-const navigation = document.querySelector("#main-nav");
-const mobileQuery = window.matchMedia("(max-width: 700px)");
-
-document.documentElement.classList.add("js-ready");
-
-function closeMenu(returnFocus = false) {
-  navigation.classList.remove("is-open");
-  menuToggle.setAttribute("aria-expanded", "false");
-  menuToggle.setAttribute("aria-label", "Open navigation");
-  navigation.inert = mobileQuery.matches;
-  if (returnFocus) menuToggle.focus();
-}
-
-function synchronizeMenu() {
-  closeMenu();
-  navigation.inert = mobileQuery.matches;
-}
-
-menuToggle.addEventListener("click", () => {
-  const open = menuToggle.getAttribute("aria-expanded") !== "true";
-  navigation.classList.toggle("is-open", open);
-  navigation.inert = !open;
-  menuToggle.setAttribute("aria-expanded", String(open));
-  menuToggle.setAttribute(
-    "aria-label",
-    open ? "Close navigation" : "Open navigation",
-  );
-});
-
-navigation.querySelectorAll("a").forEach((link) => {
-  link.addEventListener("click", () => closeMenu());
-});
-
-document.addEventListener("keydown", (event) => {
-  if (
-    event.key === "Escape" &&
-    menuToggle.getAttribute("aria-expanded") === "true"
-  )
-    closeMenu(true);
-});
-
-document.addEventListener("click", (event) => {
-  if (
-    !event.target.closest(".site-header") &&
-    menuToggle.getAttribute("aria-expanded") === "true"
-  )
-    closeMenu();
-});
-
-mobileQuery.addEventListener("change", synchronizeMenu);
-synchronizeMenu();
-
 const profileSidebar = document.querySelector(".profile-sidebar");
 
 function positionProfileSidebar() {
   const height = profileSidebar.getBoundingClientRect().height;
-  const top = Math.min(88, window.innerHeight - height - 24);
+  const top = Math.min(24, window.innerHeight - height - 24);
   profileSidebar.style.setProperty("--profile-top", `${top}px`);
 }
 
@@ -215,25 +162,5 @@ function configureReveals() {
 
 configureReveals();
 motionPreference.addEventListener("change", configureReveals);
-
-if ("IntersectionObserver" in window) {
-  const navigationLinks = [...navigation.querySelectorAll("a")];
-  const sectionObserver = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting) return;
-        navigationLinks.forEach((link) => {
-          if (link.hash === "#" + entry.target.id)
-            link.setAttribute("aria-current", "location");
-          else link.removeAttribute("aria-current");
-        });
-      });
-    },
-    { rootMargin: "-15% 0px -65% 0px", threshold: 0 },
-  );
-  document
-    .querySelectorAll("main > section")
-    .forEach((section) => sectionObserver.observe(section));
-}
 
 document.querySelector("#current-year").textContent = new Date().getFullYear();
