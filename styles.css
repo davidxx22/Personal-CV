@@ -221,8 +221,6 @@ h1 {
   text-underline-offset: 4px;
 }
 
-
-
 .profile-social {
   margin-top: 16px;
 }
@@ -289,11 +287,6 @@ main {
   font-size: 11px;
   letter-spacing: 0.05em;
   font-weight: 650;
-}
-.panel-heading > span {
-  font-size: 10px;
-  color: #737373;
-  white-space: nowrap;
 }
 
 .about-grid {
@@ -480,10 +473,7 @@ main {
   justify-content: space-between;
   margin-bottom: 18px;
 }
-.skill-card-top > span:last-child {
-  font-size: 10px;
-  color: #797979;
-}
+
 .skill-icon {
   width: 36px;
   height: 36px;
@@ -1178,9 +1168,7 @@ main {
   .panel {
     padding: 23px 21px;
   }
-  .panel-heading > span {
-    font-size: 9px;
-  }
+
   .about-grid {
     grid-template-columns: 1fr;
     gap: 20px;
@@ -1359,9 +1347,6 @@ main {
   .panel-heading h2,
   .panel-heading h3 {
     font-size: 10px;
-  }
-  .panel-heading > span {
-    font-size: 9px;
   }
 
   .about-grid h3 {
