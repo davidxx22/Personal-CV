@@ -239,8 +239,13 @@ h1 {
   width: 16px;
   height: 16px;
 }
-.sidebar-social {
-  margin-top: 20px;
+.profile-social {
+  margin-top: 16px;
+}
+.upwork-mark {
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: -0.07em;
 }
 .social-strip {
   display: flex;
