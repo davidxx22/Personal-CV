@@ -1,27 +1,110 @@
 # Personal CV — David Rey P. Bali-os
 
-A personal curriculum vitae and portfolio website for David Rey P. Bali-os, a Web Developer and UI/UX Designer. Built from scratch using HTML, CSS, and JavaScript, inspired by the approved light and purple reference layout.
+A professional personal curriculum vitae and portfolio website for **David Rey P. Bali-os**, a **Web Developer and UI/UX Designer** based in Sto. Tomas, Davao del Norte, Philippines. Built from scratch with a light background, purple accents, modern typography, portrait introduction, skill cards, and project gallery.
 
-## Technologies
+## Links
 
-- HTML for semantic content and page structure
-- CSS for responsive layouts, visual design, and transitions
-- JavaScript for mobile navigation, project filtering, and accessible project details
+- GitHub repository: https://github.com/davidxx22/Personal-CV
+- Live Vercel website: deployment in progress; the verified URL will be added after deployment.
 
-## Development
+## Student information
 
-Implementation is in progress. This repository records real development milestones, beginning with the approved content and project setup.
+- **Student:** David Rey P. Bali-os
+- **School:** Davao del Norte State College
+- **Program:** Bachelor of Science in Information Technology
 
-## Approved sections
+## Technologies used
 
-Introduction, About, Skills, Education, Projects, Experience, Training and Course Completions, and Contact.
+- **HTML:** semantic content, sections, navigation, project cards, and accessible image descriptions.
+- **CSS:** responsive Grid/Flexbox layouts, purple palette, hover effects, print styles, and reduced-motion support.
+- **JavaScript:** mobile navigation, gallery filtering, project dialogs, active section links, section reveals, and footer year.
+- **Git and GitHub:** source control and meaningful development commits.
+- **Vercel:** public static website hosting.
 
-## Student
+No application framework, package installation, build command, or environment variables are required. The source has no code comments, as requested. Explanations are in [DEVELOPMENT.md](DEVELOPMENT.md).
 
-David Rey P. Bali-os  
-Davao del Norte State College  
-Bachelor of Science in Information Technology
+## Features
 
-## Deployment
+- Responsive desktop, laptop, tablet, and mobile layouts with usable mobile navigation.
+- Eight completed projects, filterable into individual and group work.
+- Repository and website/project-page links for every project.
+- Native project dialogs with keyboard focus management and Escape-to-close behavior.
+- Subtle hover effects, smooth scrolling, and section reveals respecting reduced-motion preferences.
+- Skip link, visible keyboard focus, image descriptions, and semantic headings.
+- Education, experience, completed courses, and working contact links.
+- Content and project links remain available without JavaScript.
 
-The public Vercel URL will be added after deployment.
+## Source structure
+
+```text
+Personal CV/
+├── index.html
+├── styles.css
+├── script.js
+├── vercel.json
+├── README.md
+├── DEVELOPMENT.md
+├── SUBMISSION-CHECKLIST.md
+└── assets/
+    ├── favicon.svg
+    ├── portrait.jpg
+    └── projects/
+```
+
+## Run locally
+
+Open `index.html` directly in a browser, or use VS Code's Live Server extension. For an HTTP preview with Python installed, open a terminal in this folder and run:
+
+```powershell
+python -m http.server 5500 --bind 127.0.0.1
+```
+
+Open http://127.0.0.1:5500. Stop the server with **Ctrl+C**. Python only serves the preview; the website itself uses HTML, CSS, and JavaScript.
+
+## Edit the website
+
+- **Text, project cards, contact links, and education:** edit `index.html`.
+- **Colors, spacing, typography, animations, and breakpoints:** edit `styles.css`. Shared colors are in `:root`.
+- **Project dialog descriptions and behavior:** edit `script.js`. Longer descriptions are in `details`. Keep a card's `data-project` and its button's `data-details` consistent with the matching key.
+- **Portrait and previews:** replace files in `assets/`; update paths, image descriptions, and dimensions as needed.
+- **New projects:** duplicate a project article, update its content, add a matching detail description, and update the gallery count/label.
+
+## Vercel deployment settings
+
+| Setting               | Value                               |
+| --------------------- | ----------------------------------- |
+| Framework preset      | Other                               |
+| Root directory        | Repository root (`./`)              |
+| Build command         | None                                |
+| Output directory      | Repository root (`.`), if requested |
+| Install command       | None                                |
+| Environment variables | None                                |
+
+Once connected, pushing to the production branch triggers a new deployment.
+
+## Meaningful updates
+
+After making and reviewing an actual change:
+
+```powershell
+git status
+git add index.html styles.css script.js
+git commit -m "Improve project descriptions and mobile spacing"
+git push
+```
+
+Stage only the files changed for that update. Describe your actual work in the message. Never commit credentials or tokens.
+
+## Content and preview notes
+
+- The portrait was supplied by David for public display.
+- Website previews were captured from the supplied live links.
+- DoneeIt and Financify screenshots come from the supplied group project pages at `zeelll.vercel.app`, maintained by Azel M. Villanueva. These group Android projects link to project pages rather than browser demos.
+- SkillBridge shows its public sign-in screen; application access requires an authorized DNSC account.
+- Tripon's preview uses clearly labeled demo contributions, not actual financial records.
+- Project technologies reflect supplied and checked repositories, including supporting files. They do not imply personal proficiency in every listed language.
+- Both Cisco entries are completed Networking Academy courses, not a claim of full CCNA certification. No certificate files or download links are available.
+
+## Validation and submission
+
+See [SUBMISSION-CHECKLIST.md](SUBMISSION-CHECKLIST.md) for browser checks, deployment verification, and the two links to submit to the LMS.
