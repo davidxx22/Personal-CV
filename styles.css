@@ -254,20 +254,18 @@ h1 {
 .social-strip a {
   width: 28px;
   height: 28px;
-  border-radius: 6px;
-  border: 1px solid var(--line);
+  border: 0;
+  background: transparent;
   display: grid;
   place-items: center;
   font-size: 15px;
   font-weight: 650;
-  box-shadow: 0 2px 4px #00000005;
-  transition:
-    background 0.2s,
-    color 0.2s;
+  color: var(--accent-dark);
+  box-shadow: none;
+  transition: color 0.2s;
 }
 .social-strip a:hover {
-  background: var(--accent);
-  color: #fff;
+  color: #606060;
 }
 .social-strip .icon {
   width: 16px;
@@ -1019,12 +1017,6 @@ main {
 }
 .timeline article::before {
   box-shadow: 0 0 0 4px #f4f4f4;
-}
-.social-strip a {
-  color: var(--accent-dark);
-}
-.social-strip a:hover {
-  color: white;
 }
 .project-tech li {
   background: #f4f4f4;
