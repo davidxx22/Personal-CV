@@ -243,22 +243,22 @@ h1 {
   margin-top: 16px;
 }
 .upwork-mark {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 700;
   letter-spacing: -0.07em;
 }
 .social-strip {
   display: flex;
-  gap: 10px;
+  gap: 8px;
 }
 .social-strip a {
-  width: 34px;
-  height: 34px;
-  border-radius: 7px;
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
   border: 1px solid var(--line);
   display: grid;
   place-items: center;
-  font-size: 17px;
+  font-size: 15px;
   font-weight: 650;
   box-shadow: 0 2px 4px #00000005;
   transition:
@@ -270,8 +270,8 @@ h1 {
   color: #fff;
 }
 .social-strip .icon {
-  width: 18px;
-  height: 18px;
+  width: 16px;
+  height: 16px;
 }
 .sidebar-note {
   margin-top: 24px;
@@ -1368,8 +1368,8 @@ main {
     padding-block: 19px;
   }
   .social-strip a {
-    width: 40px;
-    height: 40px;
+    width: 32px;
+    height: 32px;
   }
   .sidebar-note {
     display: none;
