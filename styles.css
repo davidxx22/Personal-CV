@@ -264,7 +264,7 @@ main {
 }
 .section-menu {
   position: sticky;
-  top: 24px;
+  top: max(24px, var(--profile-top, 24px));
   z-index: 10;
   display: flex;
   flex-wrap: wrap;

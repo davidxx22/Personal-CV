@@ -7,6 +7,7 @@ function positionProfileSidebar() {
     ? shellBottom - height
     : Math.min(24, window.innerHeight - height - 24);
   profileSidebar.style.setProperty("--profile-top", `${top}px`);
+  profileSidebar.parentElement.style.setProperty("--profile-top", `${top}px`);
 }
 
 positionProfileSidebar();
