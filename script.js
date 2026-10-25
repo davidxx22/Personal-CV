@@ -5,10 +5,21 @@ function positionProfileSidebar() {
   const top = Math.min(24, window.innerHeight - height - 24);
   profileSidebar.style.setProperty("--profile-top", `${top}px`);
   profileSidebar.parentElement.style.setProperty("--profile-top", `${top}px`);
+  const frame = document.querySelector(".page-frame");
+  if (getComputedStyle(profileSidebar).position !== "sticky") {
+    frame.style.paddingBottom = "0px";
+    return;
+  }
+  const shell = profileSidebar.parentElement;
+  const existingSpace = parseFloat(frame.style.paddingBottom) || 0;
+  const spaceBelowCards = document.documentElement.scrollHeight - (shell.getBoundingClientRect().bottom + window.scrollY);
+  const requiredSpace = window.innerHeight - top - height;
+  frame.style.paddingBottom = `${Math.max(0, existingSpace + requiredSpace - spaceBelowCards)}px`;
 }
 
 positionProfileSidebar();
 window.addEventListener("resize", positionProfileSidebar);
+window.addEventListener("load", positionProfileSidebar);
 if ("ResizeObserver" in window) {
   new ResizeObserver(positionProfileSidebar).observe(profileSidebar);
 }
