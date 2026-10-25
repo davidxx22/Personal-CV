@@ -563,9 +563,9 @@ main {
   border-radius: 5px;
   padding: 5px 9px;
 }
-.projects-section {
+.panel.projects-section {
   min-width: 0;
-  padding-bottom: 16px;
+  padding-bottom: 8px;
 }
 .section-heading {
   display: flex;
