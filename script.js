@@ -218,6 +218,8 @@ let personalPhotosPromise;
 let photoTimer;
 let photoSession = 0;
 let personalPhotoIndex = -1;
+let personalPhotoOrder = [];
+let lastPersonalPhoto = -1;
 let photoPlaying = false;
 
 function loadPersonalPhotos() {
@@ -249,10 +251,25 @@ function stopProfilePhotos() {
 }
 
 function showPersonalPhoto(images) {
+  if (!personalPhotoOrder.length) shufflePersonalPhotos(images.length);
   personalPhotoIndex = (personalPhotoIndex + 1) % images.length;
-  profileImage.src = images[personalPhotoIndex].src;
-  profileImage.alt = `Personal photo ${personalPhotoIndex + 1} of ${images.length}`;
+  const index = personalPhotoOrder[personalPhotoIndex];
+  lastPersonalPhoto = index;
+  profileImage.src = images[index].src;
+  profileImage.alt = `Personal photo ${index + 1} of ${images.length}`;
   profilePhoto.classList.add("is-playing");
+}
+
+function shufflePersonalPhotos(length) {
+  personalPhotoOrder = Array.from({ length }, (_, index) => index);
+  for (let index = length - 1; index > 0; index--) {
+    const random = Math.floor(Math.random() * (index + 1));
+    [personalPhotoOrder[index], personalPhotoOrder[random]] = [personalPhotoOrder[random], personalPhotoOrder[index]];
+  }
+  if (length > 1 && personalPhotoOrder[0] === lastPersonalPhoto) {
+    [personalPhotoOrder[0], personalPhotoOrder[1]] = [personalPhotoOrder[1], personalPhotoOrder[0]];
+  }
+  personalPhotoIndex = -1;
 }
 
 async function startProfilePhotos() {
@@ -262,6 +279,7 @@ async function startProfilePhotos() {
   const images = await loadPersonalPhotos();
   if (session !== photoSession) return;
   if (!images.length) return stopProfilePhotos();
+  shufflePersonalPhotos(images.length);
   profilePhoto.setAttribute("aria-pressed", "true");
   showPersonalPhoto(images);
   photoTimer = window.setInterval(() => showPersonalPhoto(images), 750);
