@@ -723,6 +723,10 @@ main {
   width: 13px;
   height: 13px;
 }
+.project-actions .project-live-link {
+  margin-left: auto;
+  color: #1565c0;
+}
 .detail-button {
   padding: 0;
   margin-left: auto;
