@@ -4,7 +4,7 @@ A professional personal curriculum vitae and portfolio website for **David Rey B
 
 ## Links
 
-- GitHub repository: https://github.com/davidxx22/davidreybali-os
+- GitHub repository: https://github.com/davidxx22/personal-cv
 - Live Vercel website: https://davidreybali-os.vercel.app/
 
 ## Student information
