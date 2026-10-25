@@ -209,4 +209,3 @@ screenshotDialog.addEventListener("close", () => {
   document.body.classList.remove("modal-open");
   screenshotTrigger?.focus();
 });
-
