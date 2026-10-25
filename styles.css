@@ -1390,6 +1390,7 @@ main {
     gap: 7px;
   }
   .skills-grid {
+    grid-template-columns: 1fr;
     gap: 12px;
   }
   .skill-card {
