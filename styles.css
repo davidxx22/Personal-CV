@@ -991,6 +991,29 @@ main {
   height: 55dvh;
   object-fit: contain;
 }
+.screenshot-stage {
+  position: relative;
+  padding: 0 36px;
+}
+.screenshot-stage button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  min-height: 44px;
+  width: 36px;
+  padding: 0;
+  background: none;
+  font-size: 22px;
+}
+.screenshot-previous {
+  left: 0;
+}
+.screenshot-next {
+  right: 0;
+}
+.screenshot-stage button:hover {
+  color: #1565c0;
+}
 .screenshot-controls {
   display: flex;
   align-items: center;
