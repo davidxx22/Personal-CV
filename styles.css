@@ -292,6 +292,10 @@ main {
   background: var(--accent-soft);
   color: #1565c0;
 }
+.section-menu a[aria-current="location"] {
+  background: var(--accent);
+  color: #ffffff;
+}
 .section-anchor {
   scroll-margin-top: 0;
 }

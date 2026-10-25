@@ -82,3 +82,37 @@ configureReveals();
 motionPreference.addEventListener("change", configureReveals);
 
 document.querySelector("#current-year").textContent = new Date().getFullYear();
+
+const sectionMenu = document.querySelector(".section-menu");
+const sectionLinks = [...sectionMenu.querySelectorAll("a")];
+const menuSections = sectionLinks.map((link) =>
+  document.querySelector(link.getAttribute("href")),
+);
+let sectionUpdatePending = false;
+
+function updateCurrentSection() {
+  const marker = Math.max(160, sectionMenu.getBoundingClientRect().bottom + 24);
+  let current = 0;
+  menuSections.forEach((section, index) => {
+    if (section.getBoundingClientRect().top <= marker) current = index;
+  });
+  if (window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 4) {
+    current = sectionLinks.length - 1;
+  }
+  sectionLinks.forEach((link, index) => {
+    if (index === current) link.setAttribute("aria-current", "location");
+    else link.removeAttribute("aria-current");
+  });
+  sectionUpdatePending = false;
+}
+
+function scheduleSectionUpdate() {
+  if (sectionUpdatePending) return;
+  sectionUpdatePending = true;
+  window.requestAnimationFrame(updateCurrentSection);
+}
+
+window.addEventListener("scroll", scheduleSectionUpdate, { passive: true });
+window.addEventListener("resize", scheduleSectionUpdate);
+window.addEventListener("load", scheduleSectionUpdate);
+updateCurrentSection();
