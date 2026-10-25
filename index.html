@@ -440,18 +440,12 @@
           </section>
           <section
             id="projects"
-            class="section section-anchor projects-section"
+            class="panel section section-anchor projects-section"
             aria-labelledby="projects-title"
           >
             <div class="container">
-              <div class="section-heading reveal">
-                <div>
-                  <h2 id="projects-title">Projects</h2>
-                </div>
-                <p>
-                  Eight completed projects across websites, web applications,
-                  and mobile apps.
-                </p>
+              <div class="panel-heading reveal">
+                <h2 id="projects-title">Projects</h2>
               </div>
               <div class="project-toolbar">
                 <div
@@ -461,7 +455,7 @@
                   hidden
                 >
                   <button type="button" data-filter="all" aria-pressed="true">
-                    All projects <span>08</span></button
+                    All projects</button
                   ><button
                     type="button"
                     data-filter="individual"
@@ -476,11 +470,9 @@
                     Group
                   </button>
                 </div>
-                <span class="project-count" role="status" aria-live="polite"
-                  >Showing all 8 projects</span
-                >
+                <button type="button" class="show-more-projects" aria-expanded="false" aria-controls="project-grid" hidden>Show more</button>
               </div>
-              <div class="project-grid">
+              <div class="project-grid" id="project-grid">
                 <article
                   class="project-card reveal"
                   data-category="individual"
@@ -615,62 +607,64 @@
                 </article>
                 <article
                   class="project-card reveal"
-                  data-category="individual"
-                  data-project="barbershop"
+                  data-category="group"
+                  data-project="verde"
                 >
                   <a
                     class="project-image"
-                    href="https://gainsvilles-exclusice-barbershop.vercel.app/"
+                    href="https://verde-cafe-kiosk.vercel.app/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    aria-label="Visit the barbershop website (opens in a new tab)"
+                    aria-label="Visit Verde Café Kiosk (opens in a new tab)"
                     ><img
-                      src="assets/projects/barbershop.png"
+                      src="assets/projects/verde.png"
                       width="1265"
                       height="712"
-                      alt="Gainesville’s Exclusive Barbershop homepage with grooming services navigation"
+                      alt="Verde Coffee kiosk welcome screen with dine-in and take-out choices"
                       loading="lazy" /><span class="image-arrow"
                       ><svg class="icon" aria-hidden="true">
                         <use href="#external" /></svg></span
                   ></a>
                   <div class="project-body">
                     <div class="project-meta">
-                      <span>INDIVIDUAL · BUSINESS WEBSITE</span
+                      <span>GROUP · ORDERING SYSTEM</span
                       ><span class="completed">Completed</span>
                     </div>
-                    <h3>Gainesville’s Exclusive Barbershop</h3>
+                    <h3>Verde Café Kiosk</h3>
                     <p>
-                      A barbershop website showcasing services and barber
-                      profiles to help customers explore their grooming options.
+                      A café ordering system for browsing food and beverages and
+                      placing orders through a convenient digital kiosk.
                     </p>
                     <ul class="project-tech">
-                      <li>HTML</li>
-                      <li>CSS</li>
+                      <li>TypeScript</li>
+                      <li>PL/pgSQL</li>
+                      <li>Python</li>
                       <li>JavaScript</li>
+                      <li>HTML</li>
                     </ul>
                     <div class="project-actions">
                       <a
-                        href="https://github.com/davidxx22/GainsvillesExclusiceBarbershop"
+                        href="https://github.com/Zel-jpeg/verde-cafe-kiosk"
                         target="_blank"
                         rel="noopener noreferrer"
-                        aria-label="Barbershop source code on GitHub (opens in a new tab)"
+                        aria-label="Verde source code on GitHub (opens in a new tab)"
                         ><svg class="icon" aria-hidden="true">
                           <use href="#github" />
                         </svg>
                         Source</a
                       ><a
-                        href="https://gainsvilles-exclusice-barbershop.vercel.app/"
+                        href="https://verde-cafe-kiosk.vercel.app/"
                         target="_blank"
                         rel="noopener noreferrer"
-                        aria-label="Barbershop live website (opens in a new tab)"
+                        aria-label="Verde live website (opens in a new tab)"
                         >Live website
                         <svg class="icon" aria-hidden="true">
                           <use href="#external" /></svg></a
                       ><button
                         class="detail-button"
                         type="button"
-                        data-details="barbershop"
-                        aria-label="More about the barbershop project"
+                        data-details="verde"
+                        aria-label="More about Verde Café Kiosk"
                         hidden
                       >
                         Details +
@@ -748,6 +742,71 @@
                 </article>
                 <article
                   class="project-card reveal"
+                  data-category="individual"
+                  data-project="barbershop"
+                >
+                  <a
+                    class="project-image"
+                    href="https://gainsvilles-exclusice-barbershop.vercel.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Visit the barbershop website (opens in a new tab)"
+                    ><img
+                      src="assets/projects/barbershop.png"
+                      width="1265"
+                      height="712"
+                      alt="Gainesville’s Exclusive Barbershop homepage with grooming services navigation"
+                      loading="lazy" /><span class="image-arrow"
+                      ><svg class="icon" aria-hidden="true">
+                        <use href="#external" /></svg></span
+                  ></a>
+                  <div class="project-body">
+                    <div class="project-meta">
+                      <span>INDIVIDUAL · BUSINESS WEBSITE</span
+                      ><span class="completed">Completed</span>
+                    </div>
+                    <h3>Gainesville’s Exclusive Barbershop</h3>
+                    <p>
+                      A barbershop website showcasing services and barber
+                      profiles to help customers explore their grooming options.
+                    </p>
+                    <ul class="project-tech">
+                      <li>HTML</li>
+                      <li>CSS</li>
+                      <li>JavaScript</li>
+                    </ul>
+                    <div class="project-actions">
+                      <a
+                        href="https://github.com/davidxx22/GainsvillesExclusiceBarbershop"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Barbershop source code on GitHub (opens in a new tab)"
+                        ><svg class="icon" aria-hidden="true">
+                          <use href="#github" />
+                        </svg>
+                        Source</a
+                      ><a
+                        href="https://gainsvilles-exclusice-barbershop.vercel.app/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Barbershop live website (opens in a new tab)"
+                        >Live website
+                        <svg class="icon" aria-hidden="true">
+                          <use href="#external" /></svg></a
+                      ><button
+                        class="detail-button"
+                        type="button"
+                        data-details="barbershop"
+                        aria-label="More about the barbershop project"
+                        hidden
+                      >
+                        Details +
+                      </button>
+                    </div>
+                  </div>
+                </article>
+                <article
+                  class="project-card reveal"
                   data-category="group"
                   data-project="skillbridge"
                 >
@@ -807,73 +866,6 @@
                         type="button"
                         data-details="skillbridge"
                         aria-label="More about SkillBridge"
-                        hidden
-                      >
-                        Details +
-                      </button>
-                    </div>
-                  </div>
-                </article>
-                <article
-                  class="project-card reveal"
-                  data-category="group"
-                  data-project="verde"
-                >
-                  <a
-                    class="project-image"
-                    href="https://verde-cafe-kiosk.vercel.app/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Visit Verde Café Kiosk (opens in a new tab)"
-                    ><img
-                      src="assets/projects/verde.png"
-                      width="1265"
-                      height="712"
-                      alt="Verde Coffee kiosk welcome screen with dine-in and take-out choices"
-                      loading="lazy" /><span class="image-arrow"
-                      ><svg class="icon" aria-hidden="true">
-                        <use href="#external" /></svg></span
-                  ></a>
-                  <div class="project-body">
-                    <div class="project-meta">
-                      <span>GROUP · ORDERING SYSTEM</span
-                      ><span class="completed">Completed</span>
-                    </div>
-                    <h3>Verde Café Kiosk</h3>
-                    <p>
-                      A café ordering system for browsing food and beverages and
-                      placing orders through a convenient digital kiosk.
-                    </p>
-                    <ul class="project-tech">
-                      <li>TypeScript</li>
-                      <li>PL/pgSQL</li>
-                      <li>Python</li>
-                      <li>JavaScript</li>
-                      <li>HTML</li>
-                    </ul>
-                    <div class="project-actions">
-                      <a
-                        href="https://github.com/Zel-jpeg/verde-cafe-kiosk"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="Verde source code on GitHub (opens in a new tab)"
-                        ><svg class="icon" aria-hidden="true">
-                          <use href="#github" />
-                        </svg>
-                        Source</a
-                      ><a
-                        href="https://verde-cafe-kiosk.vercel.app/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="Verde live website (opens in a new tab)"
-                        >Live website
-                        <svg class="icon" aria-hidden="true">
-                          <use href="#external" /></svg></a
-                      ><button
-                        class="detail-button"
-                        type="button"
-                        data-details="verde"
-                        aria-label="More about Verde Café Kiosk"
                         hidden
                       >
                         Details +

@@ -530,7 +530,7 @@ main {
   padding: 5px 9px;
 }
 .projects-section {
-  padding-top: 18px;
+  min-width: 0;
 }
 .section-heading {
   display: flex;
@@ -581,9 +581,16 @@ main {
   font-size: 8px;
   padding-left: 4px;
 }
-.project-count {
-  font-size: 9px;
-  color: #646464;
+.show-more-projects {
+  background: none;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 8px 11px;
+  font-size: 10px;
+  white-space: nowrap;
+}
+.show-more-projects:hover {
+  background: var(--accent-soft);
 }
 .project-grid {
   display: grid;
