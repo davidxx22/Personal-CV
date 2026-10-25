@@ -900,6 +900,14 @@ main {
   height: 12px;
   margin-left: auto;
 }
+.contact-arrow {
+  margin-left: auto;
+  font-size: 18px;
+}
+.contact-item .contact-location {
+  white-space: nowrap;
+  font-size: clamp(9px, 2.4vw, 11px);
+}
 .contact-item[href]:hover strong {
   text-decoration: underline;
   text-underline-offset: 4px;
@@ -907,12 +915,31 @@ main {
 .contact-socials {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 10px;
   font-size: 10px;
   margin-top: 20px;
 }
+.contact-socials a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: 1px solid #ffffff25;
+  border-radius: 8px;
+  transition: background-color 0.2s;
+}
+.contact-socials .icon {
+  width: 18px;
+  height: 18px;
+}
+.contact-socials .social-letter {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1;
+}
 .contact-socials a:hover {
-  text-decoration: underline;
+  background: #ffffff15;
 }
 .site-footer {
   display: flex;
