@@ -288,7 +288,7 @@ main {
   .section-menu .menu-toggle:not([hidden]) {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-end;
     width: 100%;
     min-height: 44px;
     padding: 8px 12px;
