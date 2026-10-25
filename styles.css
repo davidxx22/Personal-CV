@@ -285,11 +285,18 @@ main {
   display: none;
 }
 @media (max-width: 768px) {
+  .section-menu:has(.menu-toggle:not([hidden])) {
+    background: none;
+    border: 0;
+    box-shadow: none;
+    padding: 0;
+    justify-content: flex-end;
+  }
   .section-menu .menu-toggle:not([hidden]) {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    width: 100%;
+    width: 44px;
     min-height: 44px;
     padding: 8px 12px;
     border-radius: 10px;
@@ -316,8 +323,11 @@ main {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     margin-top: 6px;
-    border-top: 1px solid var(--line);
-    padding-top: 6px;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+    padding: 6px;
   }
 }
 .section-menu a {
