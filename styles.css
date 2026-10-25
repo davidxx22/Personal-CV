@@ -616,15 +616,18 @@ main {
   padding-left: 4px;
 }
 .show-more-projects {
+  display: block;
+  margin: 18px auto 0;
   background: none;
-  border: 1px solid var(--line);
-  border-radius: 6px;
+  border: 0;
   padding: 8px 11px;
-  font-size: 10px;
+  min-height: 44px;
+  font-size: 12px;
   white-space: nowrap;
+  transition: color 0.2s;
 }
 .show-more-projects:hover {
-  background: var(--accent-soft);
+  color: #1565c0;
 }
 .project-grid {
   display: grid;
