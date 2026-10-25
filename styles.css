@@ -994,16 +994,16 @@ main {
 .screenshot-controls {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 8px;
+  justify-content: center;
+  gap: 16px;
   margin-top: 16px;
 }
 .screenshot-controls button {
   min-height: 44px;
+  min-width: 44px;
   padding: 8px;
-  background: var(--accent-soft);
-  border-radius: 6px;
-  font-size: 12px;
+  background: none;
+  font-size: 22px;
 }
 .screenshot-controls button:hover {
   color: #1565c0;
