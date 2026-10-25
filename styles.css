@@ -723,8 +723,7 @@ main {
   width: 13px;
   height: 13px;
 }
-.project-actions .project-live-link {
-  margin-left: auto;
+.project-actions a:hover {
   color: #1565c0;
 }
 .detail-button {
