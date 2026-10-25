@@ -1,43 +1,41 @@
 # Personal CV — David Rey Bali-os
 
-A professional personal curriculum vitae and portfolio website for **David Rey Bali-os**, a **Web Developer and UI/UX Designer** based in Sto. Tomas, Davao del Norte, Philippines. Built from scratch with a light neutral palette, portrait sidebar, rounded information cards, experience timelines, and project gallery.
+A professional personal Curriculum Vitae (CV) and portfolio website for **David Rey Bali-os**, a **Web Developer / UI & UX Designer** and fourth-year Bachelor of Science in Information Technology student at **Davao del Norte State College**. Built from scratch using HTML, CSS, and JavaScript, with a white background, neutral accents, a formal portrait sidebar, and rounded information cards.
 
-## Links
+## Submission links
 
-- GitHub repository: https://github.com/davidxx22/personal-cv
-- Live Vercel website: https://davidreybali-os.vercel.app/
-
-## Student information
-
-- **Student:** David Rey Bali-os
-- **School:** Davao del Norte State College
-- **Program:** Bachelor of Science in Information Technology
+- **GitHub repository:** [personal-cv](https://github.com/davidxx22/personal-cv)
+- **Live Vercel website:** [davidreybali-os.vercel.app](https://davidreybali-os.vercel.app/)
+- **Vercel project name:** `davidreybali-os`
 
 ## Technologies used
 
-- **HTML:** semantic content, sections, navigation, project cards, and accessible image descriptions.
-- **CSS:** responsive Grid/Flexbox layouts, neutral palette, hover effects, print styles, and reduced-motion support.
-- **JavaScript:** gallery filtering, project dialogs, adaptive sidebar positioning, section reveals, and footer year.
-- **Git and GitHub:** source control and meaningful development commits.
-- **Vercel:** public static website hosting.
+- **HTML:** semantic sections, headings, project cards, links, and a native screenshot dialog.
+- **CSS:** Grid and Flexbox layouts, responsive media queries, hover effects, section-reveal styling, print styles, and reduced-motion support.
+- **JavaScript:** project filtering and expansion, screenshot galleries, active-section navigation, sidebar positioning, section reveals, and the footer year.
+- **Git and GitHub:** version control, public source, and real development commits.
+- **Vercel:** static website hosting and automatic deployment from `main`.
 
-No application framework, package installation, build command, or environment variables are required. The source has no code comments, as requested. Explanations are in [DEVELOPMENT.md](DEVELOPMENT.md).
+No framework, package installation, build command, or environment variables are required. The source code has no comments as requested; implementation explanations are in [DEVELOPMENT.md](DEVELOPMENT.md).
 
-## Features
+## Current website
 
-- Responsive desktop, laptop, tablet, and mobile layouts with a portrait sidebar and no navigation bar.
-- Eight completed projects, filterable into individual and group work.
-- Repository and website/project-page links for every project.
-- Native project dialogs with keyboard focus management and Escape-to-close behavior.
-- Subtle hover effects, smooth scrolling, and section reveals respecting reduced-motion preferences.
-- Skip link, visible keyboard focus, image descriptions, and semantic headings.
-- Education, experience, completed courses, and working contact links.
-- Content and project links remain available without JavaScript.
+- Formal profile photo, name, career title, introduction, and GitHub, LinkedIn, Facebook, and Upwork icons.
+- Plain-text phone, email, and location in the profile card; the portrait has no slideshow.
+- About Me and career objective; experience; education; and two Cisco Networking Academy course completions.
+- Technical and professional skills with local technology logos and no invented proficiency percentages.
+- Desktop section navigation with current-section highlighting. Navigation is hidden at **768px and below**; visitors scroll and can use Back to top.
+- Eight completed projects. The initial view shows **SIDEFORM, Tripon, Verde Café Kiosk, and Sakyan**. Show more reveals all eight; Show less restores the four featured projects.
+- Individual and Group filters display three and five projects respectively. Returning to All projects restores the featured view.
+- Every project has a Source link to its GitHub repository. Website project images open their live sites; DoneeIt and Financify images open local screenshot galleries.
+- **DoneeIt:** 13 screenshots. **Financify:** 4 screenshots. The dialog has vertically centered side arrows, a counter, keyboard arrow controls, Escape to close, and focus restoration.
+- A dark contact card with Gmail browser-compose links, a mobile dialer link, and four social profile icons. The Start a conversation button also opens Gmail.
+- Hover color changes, smooth scrolling, section reveals, visible keyboard focus, a skip link, and reduced-motion support.
 
-## Source structure
+## File structure
 
 ```text
-Personal CV/
+personal-cv/
 ├── index.html
 ├── styles.css
 ├── script.js
@@ -48,77 +46,63 @@ Personal CV/
 └── assets/
     ├── favicon.svg
     ├── portrait.jpg
+    ├── icons/
+    │   └── LICENSE-devicon.txt
     └── projects/
+        ├── doneeit/
+        ├── financify/
+        └── project preview images
 ```
 
 ## Run locally
 
-Open `index.html` directly in a browser, or use VS Code's Live Server extension. For an HTTP preview with Python installed, open a terminal in this folder and run:
+Open `index.html` in a browser or use VS Code Live Server. For an HTTP preview with Python installed, run this from the project folder:
 
 ```powershell
 python -m http.server 5500 --bind 127.0.0.1
 ```
 
-Open http://127.0.0.1:5500. Stop the server with **Ctrl+C**. Python only serves the preview; the website itself uses HTML, CSS, and JavaScript.
+Open [localhost:5500](http://127.0.0.1:5500). Stop the server with **Ctrl+C**. Python only serves the preview; it is not a website dependency.
 
 ## Edit the website
 
-- **Text, project cards, contact links, and education:** edit `index.html`.
-- **Colors, spacing, typography, animations, and breakpoints:** edit `styles.css`. Shared colors are in `:root`.
-- **Project dialog descriptions and behavior:** edit `script.js`. Longer descriptions are in `details`. Keep a card's `data-project` and its button's `data-details` consistent with the matching key.
-- **Portrait and previews:** replace files in `assets/`; update paths, image descriptions, and dimensions as needed.
-- **New projects:** duplicate a project article, update its content, add a matching detail description, and update the gallery count/label.
+- **Content and links:** edit `index.html`.
+- **Colors, typography, spacing, and responsive layout:** edit `styles.css`. Shared colors are in `:root`.
+- **Featured projects and filters:** edit `featuredProjects` and `updateProjects()` in `script.js`; keep the HTML `data-project` and `data-category` values consistent.
+- **App screenshot galleries:** edit `screenshotGalleries` in `script.js` and place images in the matching project asset folder.
+- **Portrait and previews:** replace files in `assets/` and update image paths, descriptions, and dimensions as needed.
+- **New projects:** duplicate a project article, update its source and preview link, and review this documentation's project totals and filter descriptions.
 
-## Vercel deployment settings
+Without JavaScript, all eight cards and their source links remain readable. The DoneeIt and Financify preview links open their first image directly; interactive filters, expansion, and screenshot browsing require JavaScript.
 
-| Setting               | Value                               |
-| --------------------- | ----------------------------------- |
-| Framework preset      | Other                               |
-| Root directory        | Repository root (`./`)              |
-| Build command         | None                                |
-| Output directory      | Repository root (`.`), if requested |
-| Install command       | None                                |
-| Environment variables | None                                |
+## Deployment and Git workflow
 
-Once connected, pushing to the production branch triggers a new deployment.
+Vercel uses the **Other** framework preset, repository root, no build/install command, and no environment variables. Production deploys from `main` in the connected `personal-cv` repository. `vercel.json` enables clean URLs and basic response headers.
 
-## Meaningful updates
-
-After making and reviewing an actual change:
+After a real, reviewed change, stage the files you changed, make a descriptive commit, and push:
 
 ```powershell
 git status
 git add index.html styles.css script.js
 git commit -m "Improve project descriptions and mobile spacing"
-git push
+git push origin main
 ```
 
-Stage only the files changed for that update. Describe your actual work in the message. Never commit credentials or tokens.
+For documentation-only changes, stage the Markdown files instead. Verify the new deployment before submitting. The old website address, `david-balios-cv.vercel.app`, redirects to the current address; use the current submission links above.
 
-## Content and preview notes
+## Content and asset notes
 
-- The portrait was supplied by David for public display.
-- Website previews were captured from the supplied live links.
-- DoneeIt and Financify screenshots come from the supplied group project pages at `zeelll.vercel.app`, maintained by Azel M. Villanueva. These group Android projects link to project pages rather than browser demos.
-- SkillBridge shows its public sign-in screen; application access requires an authorized DNSC account.
-- Tripon's preview uses clearly labeled demo contributions, not actual financial records.
-- Project technologies reflect supplied and checked repositories, including supporting files. They do not imply personal proficiency in every listed language.
-- Both Cisco entries are completed Networking Academy courses, not a claim of full CCNA certification. No certificate files or download links are available.
+- David supplied the formal portrait. It remains static and in its original colors.
+- Website preview images were captured from the supplied live links.
+- DoneeIt and Financify screenshots come from the supplied group project pages maintained by Azel M. Villanueva: [DoneeIt](https://zeelll.vercel.app/projects/doneeit) and [Financify](https://zeelll.vercel.app/projects/financify). The CV displays local screenshot copies rather than redirecting visitors to that portfolio.
+- SkillBridge's public preview is a sign-in screen; system access requires an authorized account.
+- Tripon's preview uses labeled demo contributions rather than actual financial records.
+- Project technology lists reflect supplied and checked repository contents, including supporting files. They do not claim personal proficiency in every listed language.
+- The Cisco entries are completed Networking Academy courses, not a claim of full CCNA certification. Certificate files are unavailable, and there are no certificate download links.
+- Skill logos come from [Devicon](https://github.com/devicons/devicon), with its MIT license in `assets/icons/LICENSE-devicon.txt`. The Liquid icon comes from [Shopify's Liquid documentation](https://shopify.github.io/liquid/). Text labels accompany the logos.
 
 ## Validation and submission
 
-Verified on October 24, 2026: anonymous access to the live website and public repository; successful responses for all page assets; mobile navigation; individual/group/all filters; all eight project dialogs and preview images; keyboard Escape and focus restoration; and responsive previews at 320, 390, 768, 1024, and 1440 pixels without horizontal overflow. Actual-device review and email/phone application handling remain student checks.
+Browser checks have covered 320, 390, 768, 1024, and 1440px widths, project filtering/expansion, navigation visibility, and screenshot dialog controls. Public access to the current GitHub and Vercel links has been verified. Actual-device behavior, external social profile access, and the final student content review remain manual submission checks.
 
-See [SUBMISSION-CHECKLIST.md](SUBMISSION-CHECKLIST.md) for browser checks, deployment verification, and the two links to submit to the LMS.
-
-## Monochrome redesign
-
-On October 25, 2026, the site was redesigned around the approved black-and-white reference. The update adds a portrait/contact sidebar, white rounded panels, compact education and experience timelines, and grayscale project previews. All eight projects and existing accessible interactions remain. Responsive widths, mobile navigation, filtering, and keyboard dialog behavior were checked again after the redesign.
-
-The navigation bar and mobile menu were removed at the student’s request. Project links, contact links, and the Back to top link remain available.
-
-The current palette uses white page backgrounds and neutral gray accents. The profile portrait and project previews retain their original colors.
-
-## Technology logos
-
-The skill-card SVG logos are local files from [Devicon](https://github.com/devicons/devicon). Liquid’s water-drop icon is from [Shopify’s official Liquid documentation](https://shopify.github.io/liquid/). The MIT license is included in `assets/icons/LICENSE-devicon.txt`. The logos identify their respective technologies and tools; visible text labels remain alongside each image.
+Use [SUBMISSION-CHECKLIST.md](SUBMISSION-CHECKLIST.md) before submitting both links. Read [DEVELOPMENT.md](DEVELOPMENT.md) to prepare to explain the implementation to the instructor.

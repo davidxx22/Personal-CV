@@ -1,52 +1,88 @@
 # Understanding the CV website
 
-## Design decisions
+## Purpose and design
 
-The redesigned layout uses the reference’s portrait and contact sidebar, rounded information cards, compact timelines, and project gallery, with the student’s requested light neutral palette. The portrait and project images retain their original colors. Its content and implementation were created for David's approved CV rather than copied from a downloaded template.
+The website presents David Rey Bali-os's profile, education, skills, completed projects, experience, training, and contact information. Its original implementation adapts the approved reference into a formal portrait sidebar and rounded information cards. The current appearance uses a white background and neutral accents, with color retained in photos, project images, technology logos, status badges, and link hover states.
 
-The introduction identifies David and his focus. About explains his background and career objective. Skills show tools without unverified proficiency scores. Projects provide concrete examples. Journey combines education, relevant experience, and completed training. Contact provides email, phone, and profile links.
+The technologies are HTML, CSS, and JavaScript, without a framework or build system. Explanations are kept in this document because the student requested source code without comments.
 
-## How the files work together
+## Files and responsibilities
 
-`index.html` contains the structure and content: one main heading, section headings, eight project cards, local images, and actual links. Keeping content in HTML lets visitors read it and follow links if JavaScript is unavailable.
+- `index.html` contains the content, semantic headings, desktop section links, eight project cards, source links, and native screenshot dialog. It also loads CSS and JavaScript.
+- `styles.css` contains color variables, typography, Grid/Flexbox layouts, responsive breakpoints, hover effects, reveal styles, print rules, and reduced-motion rules.
+- `script.js` adds project filtering/expansion, active navigation, screenshot browsing, section reveals, sidebar positioning, and the current footer year. `defer` lets HTML parse before the script runs.
+- `assets/` holds the portrait, favicon, technology logos, project previews, and app screenshots.
+- `vercel.json` holds static hosting settings for clean URLs and response headers.
 
-`styles.css` controls presentation. Variables in `:root` hold the palette. CSS Grid arranges the sidebar/content shell, skills, projects, and timeline entries; Flexbox aligns navigation and buttons. Media queries change columns and spacing on narrower screens. The sidebar stacks above the content, the gallery becomes one column, without a navigation bar on any screen size. On desktop, the profile scrolls naturally with the page before sticking near the bottom of the viewport. A small ResizeObserver adjustment keeps all its contact links reachable on short screens without a separate scrollbar.
+## Responsive layout and sidebar
 
-`script.js` adds interactions after content loads. The `defer` attribute lets the HTML finish parsing before the script accesses elements.
+CSS Grid places the profile sidebar beside the main content on wider screens. At 700px and below, the profile stacks above the content. Skills, projects, and timeline layouts also adapt at their own breakpoints.
 
-## Moving around the page
+The profile photo is static. Phone, email, and location inside the profile card are plain text. A format-detection meta tag discourages mobile browsers from converting them into automatic links.
 
-The navigation bar and mobile menu were removed at the student’s request. Visitors scroll through the CV or use the Back to top link. Contact links and project actions remain available.
+On desktop, the profile uses sticky positioning. `positionProfileSidebar()` measures its height and chooses an offset that keeps the bottom reachable in shorter viewports. Resize and load events, plus `ResizeObserver`, recalculate it when dimensions change. It does not change the profile offset on every scroll. A bottom-spacing adjustment is disabled at 1100px and below and capped at 24px on larger screens to avoid excess blank space.
 
-## Project filters
+## Navigation
 
-Each project has a `data-category`: `individual` or `group`. Buttons compare that value with their `data-filter` value and set unmatched cards to `hidden`. Status text announces the visible count. There are three individual and five group projects.
+Above 768px, the sticky section menu links to About Me, Experience, Education, Training, Skills, Projects, and Contact. At 768px and below, the entire menu is hidden, including its earlier hamburger controls. Visitors scroll through the content and use Back to top.
 
-## Project dialogs
+`updateCurrentSection()` compares section positions with a marker below the menu. It sets `aria-current="location"` on one link, which CSS highlights. Scroll events schedule this work through `requestAnimationFrame` rather than running repeated updates in the same frame. HTML anchor links provide navigation, and CSS scroll padding leaves room for the sticky menu.
 
-Detail buttons identify entries in `details`. The script uses card content to build a dialog containing the preview, title, description, technologies, and links. It creates elements and assigns text with `textContent` rather than inserting untrusted HTML.
+## Project filtering and expansion
 
-The native `dialog` element provides modal keyboard behavior. Escape closes it, scrolling behind it is locked, and focus returns to the opening button. Browsers without dialog support retain normal project content and links.
+Every project has `data-project` and `data-category` values. There are three individual projects and five group projects.
 
-## Section reveals
+`featuredProjects` identifies SIDEFORM, Tripon, Verde, and Sakyan. On the initial All projects view, `updateProjects()` shows those four. Show more reveals all eight; Show less returns to four. Individual displays all three individual projects, and Group displays all five group projects. Choosing a filter resets expansion; Show more is only visible for All projects.
 
-`IntersectionObserver` checks when sections enter the viewport. It reveals content once. Content remains visible if observers are unavailable. Visitors requesting reduced motion receive content without reveal movement or smooth scrolling.
+Cards are hidden with the HTML `hidden` property. Filter buttons expose their state through `aria-pressed`, and Show more exposes expansion through `aria-expanded` and `aria-controls`.
 
-## Accessibility choices
+All eight cards are in the HTML. With JavaScript disabled, the cards and links remain available while interactive controls stay hidden.
 
-- A skip link goes to main content; keyboard focus is visible.
-- Meaningful images have descriptions; decorative icons are hidden from assistive technology.
-- Filters expose their pressed state and announce a live status message.
-- New-tab links announce that behavior and use `rel="noopener noreferrer"`.
-- Email and phone actions use `mailto:` and `tel:` to open the visitor's configured application.
-- CSS includes print styles and reduced-motion support.
+## Project previews
+
+The six website project images link to their public websites in new tabs. Every card has a GitHub Source link. Source text turns blue on hover without an underline; the cards no longer have Details buttons or separate Live website text links.
+
+DoneeIt and Financify are Android app projects. Their image links point to local screenshot files, and JavaScript intercepts a normal click to open the site's screenshot dialog. Visitors stay on this CV. `screenshotGalleries` lists 13 DoneeIt screenshots and four Financify screenshots.
+
+`renderScreenshot()` updates the image, description, and counter. `changeScreenshot()` moves forward/backward and wraps at the ends. Plain left/right arrows sit beside the screenshot, centered vertically. Left/Right keyboard keys also change the image. The counter uses a polite live status announcement.
+
+The native `dialog` element handles modal focus. Escape or the close button closes it; background scrolling is locked while open; focus returns to the preview link afterward. If native dialog support is unavailable or JavaScript is disabled, the link opens the first screenshot directly.
+
+## Contact actions
+
+The dark contact card contains working actions, separate from the profile card's plain contact text:
+
+- The email address and Start a conversation button open Gmail browser compose in a new tab with David's email as the recipient. The visitor may need to sign in to Gmail.
+- The phone number uses `tel:+639120261599` to request the visitor's dialer or calling application. Device behavior depends on available applications.
+- GitHub, LinkedIn, Facebook, and Upwork appear as icon links with accessible names.
+
+The contact location is one line. Email and phone text change color on hover without an underline.
+
+## Animation and accessibility
+
+`IntersectionObserver` reveals marked content once it enters the viewport. CSS provides subtle card/button hover effects and smooth scrolling. The removed personal-photo slideshow is not part of the submitted site.
+
+`prefers-reduced-motion` disables smooth scrolling/reveal movement for visitors who request less animation. A preference change reconfigures reveals. Content remains visible if observers are unavailable.
+
+Other accessibility measures include a skip link, visible keyboard focus, semantic headings, image descriptions, hidden decorative icons, labeled social controls, and native dialog keyboard behavior. Final checks on an actual phone and another browser are still useful, particularly for contact actions and browser-added formatting.
+
+## Source control and deployment
+
+- Repository: [davidxx22/personal-cv](https://github.com/davidxx22/personal-cv)
+- Production website: [davidreybali-os.vercel.app](https://davidreybali-os.vercel.app/)
+- Vercel project: `davidreybali-os`; production branch: `main`.
+
+GitHub preserves the source and real change history. Vercel publishes the static files after pushes to the connected branch. No backend or database is required for this CV. Renaming the repository preserved its history; the local Git remote uses the current repository URL. The previous website address redirects to the new one.
 
 ## Preparing for the instructor discussion
 
-Be ready to explain how the interview shaped the content; how the sidebar and card layout adapts the reference with neutral gray accents; how semantic HTML, Grid, Flexbox, and media queries create the design; how filters, dialogs, and sidebar positioning work; and how accessibility choices improve usability.
+Be ready to demonstrate and explain:
 
-GitHub stores the source and history; Vercel hosts the public website. Real commits record setup, implementation, interactions, and documentation/deployment work. Inspect them with:
+1. How the approved content and layout represent your actual background.
+2. How HTML sections, headings, links, and image descriptions organize the CV.
+3. How Grid, Flexbox, and media queries adapt the layout to different screens.
+4. How filters, Show more, active navigation, and screenshot controls use JavaScript.
+5. How reduced motion, keyboard focus, and native dialog behavior support accessibility.
+6. How real commits record changes and how GitHub connects to Vercel deployment.
 
-```powershell
-git log --oneline
-```
+Review the history with `git log --oneline`. Read the implementation alongside this guide so you can explain the code you submit.
