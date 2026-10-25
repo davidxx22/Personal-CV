@@ -775,10 +775,9 @@
                 >
                   <a
                     class="project-image app-preview doneeit-preview"
-                    href="https://zeelll.vercel.app/projects/doneeit"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="View DoneeIt project page (opens in a new tab)"
+                    href="assets/projects/doneeit.webp"
+                    data-image-preview
+                    aria-label="Preview DoneeIt screenshot"
                     ><img
                       src="assets/projects/doneeit.webp"
                       width="576"
@@ -826,10 +825,9 @@
                 >
                   <a
                     class="project-image app-preview financify-preview"
-                    href="https://zeelll.vercel.app/projects/financify"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="View Financify project page (opens in a new tab)"
+                    href="assets/projects/financify.webp"
+                    data-image-preview
+                    aria-label="Preview Financify screenshot"
                     ><img
                       src="assets/projects/financify.webp"
                       width="576"
@@ -955,5 +953,10 @@
         <a href="#home">Back to top ↑</a>
       </footer>
     </div>
+    <dialog class="screenshot-dialog" aria-labelledby="screenshot-title">
+      <form method="dialog"><button class="dialog-close" aria-label="Close screenshot preview">×</button></form>
+      <h2 id="screenshot-title"></h2>
+      <img class="screenshot-full" alt="" />
+    </dialog>
   </body>
 </html>

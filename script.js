@@ -116,3 +116,24 @@ window.addEventListener("scroll", scheduleSectionUpdate, { passive: true });
 window.addEventListener("resize", scheduleSectionUpdate);
 window.addEventListener("load", scheduleSectionUpdate);
 updateCurrentSection();
+
+const screenshotDialog = document.querySelector(".screenshot-dialog");
+let screenshotTrigger;
+document.querySelectorAll("[data-image-preview]").forEach((link) => {
+  link.addEventListener("click", (event) => {
+    if (typeof screenshotDialog.showModal !== "function") return;
+    event.preventDefault();
+    const image = link.querySelector("img");
+    const preview = screenshotDialog.querySelector("img");
+    preview.src = image.src;
+    preview.alt = image.alt;
+    document.querySelector("#screenshot-title").textContent = link.closest(".project-card").querySelector("h3").textContent;
+    screenshotTrigger = link;
+    document.body.classList.add("modal-open");
+    screenshotDialog.showModal();
+  });
+});
+screenshotDialog.addEventListener("close", () => {
+  document.body.classList.remove("modal-open");
+  screenshotTrigger?.focus();
+});
