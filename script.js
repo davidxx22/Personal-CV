@@ -6,7 +6,7 @@ function positionProfileSidebar() {
   profileSidebar.style.setProperty("--profile-top", `${top}px`);
   profileSidebar.parentElement.style.setProperty("--profile-top", `${top}px`);
   const frame = document.querySelector(".page-frame");
-  if (getComputedStyle(profileSidebar).position !== "sticky") {
+  if (window.innerWidth <= 1100 || getComputedStyle(profileSidebar).position !== "sticky") {
     frame.style.paddingBottom = "0px";
     return;
   }
@@ -14,7 +14,7 @@ function positionProfileSidebar() {
   const existingSpace = parseFloat(frame.style.paddingBottom) || 0;
   const spaceBelowCards = document.documentElement.scrollHeight - (shell.getBoundingClientRect().bottom + window.scrollY);
   const requiredSpace = window.innerHeight - top - height;
-  frame.style.paddingBottom = `${Math.max(0, existingSpace + requiredSpace - spaceBelowCards)}px`;
+  frame.style.paddingBottom = `${Math.min(24, Math.max(0, existingSpace + requiredSpace - spaceBelowCards))}px`;
 }
 
 positionProfileSidebar();
