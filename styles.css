@@ -187,7 +187,7 @@ h1 {
 }
 
 .profile-intro {
-  font-size: 13px;
+  font-size: 14px;
   line-height: 1.9;
   color: #535353;
   margin-top: 22px;
@@ -1263,6 +1263,7 @@ main {
   .objective {
     padding-left: 22px;
   }
+  .profile-intro,
   .about-grid p {
     font-size: 13px;
   }
@@ -1349,6 +1350,7 @@ main {
   .about-grid .objective h3 {
     font-size: 12px;
   }
+  .profile-intro,
   .about-grid p {
     font-size: 14px;
   }
@@ -1647,7 +1649,7 @@ main {
   }
 
   .profile-intro {
-    font-size: 14px;
+    font-size: 15px;
   }
   .sidebar-contact {
     font-size: 10px;
