@@ -275,6 +275,51 @@ main {
   border-radius: 16px;
   box-shadow: var(--shadow);
 }
+.section-menu-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px;
+  width: 100%;
+}
+.menu-toggle {
+  display: none;
+}
+@media (max-width: 768px) {
+  .section-menu .menu-toggle:not([hidden]) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    min-height: 44px;
+    padding: 8px 12px;
+    border-radius: 10px;
+    background: none;
+    font-size: 12px;
+    font-weight: 600;
+  }
+  .burger-icon {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 18px;
+  }
+  .burger-icon span {
+    height: 2px;
+    width: 100%;
+    background: currentColor;
+    border-radius: 1px;
+  }
+  .section-menu:has(.menu-toggle:not([hidden])) .section-menu-links {
+    display: none;
+  }
+  .section-menu:has(.menu-toggle[aria-expanded="true"]) .section-menu-links {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin-top: 6px;
+    border-top: 1px solid var(--line);
+    padding-top: 6px;
+  }
+}
 .section-menu a {
   display: flex;
   align-items: center;

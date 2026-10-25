@@ -97,6 +97,27 @@ document.querySelector("#current-year").textContent = new Date().getFullYear();
 
 const sectionMenu = document.querySelector(".section-menu");
 const sectionLinks = [...sectionMenu.querySelectorAll("a")];
+const menuToggle = sectionMenu.querySelector(".menu-toggle");
+menuToggle.hidden = false;
+menuToggle.addEventListener("click", () => {
+  const expanded = menuToggle.getAttribute("aria-expanded") === "true";
+  menuToggle.setAttribute("aria-expanded", String(!expanded));
+});
+sectionLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    menuToggle.setAttribute("aria-expanded", "false");
+    if (window.matchMedia("(max-width: 768px)").matches) menuToggle.focus({ preventScroll: true });
+  });
+});
+sectionMenu.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && menuToggle.getAttribute("aria-expanded") === "true") {
+    menuToggle.setAttribute("aria-expanded", "false");
+    menuToggle.focus();
+  }
+});
+window.matchMedia("(max-width: 768px)").addEventListener("change", () => {
+  menuToggle.setAttribute("aria-expanded", "false");
+});
 const menuSections = sectionLinks.map((link) =>
   document.querySelector(link.getAttribute("href")),
 );
