@@ -124,14 +124,53 @@ updateCurrentSection();
 
 const screenshotDialog = document.querySelector(".screenshot-dialog");
 let screenshotTrigger;
+let screenshotIndex = 0;
+let screenshotProject;
+const screenshotGalleries = {
+  doneeit: Array.from({ length: 13 }, (_, index) => ({
+    src: `assets/projects/doneeit/screen-${String(index + 1).padStart(2, "0")}.webp`,
+    alt: `DoneeIt app screenshot ${index + 1}`,
+  })),
+  financify: [
+    ["dashboard", "Balance and recent transactions"],
+    ["analytics", "Budget allocation and analytics"],
+    ["recipes", "Recipe recommendations"],
+    ["currency", "Currency conversion"],
+  ].map(([name, description]) => ({
+    src: `assets/projects/financify/${name}.webp`,
+    alt: `Financify app: ${description}`,
+  })),
+};
+
+function renderScreenshot() {
+  const gallery = screenshotGalleries[screenshotProject];
+  const image = screenshotDialog.querySelector("img");
+  image.src = gallery[screenshotIndex].src;
+  image.alt = gallery[screenshotIndex].alt;
+  screenshotDialog.querySelector(".screenshot-count").textContent = `${screenshotIndex + 1} / ${gallery.length}`;
+}
+
+function changeScreenshot(step) {
+  const length = screenshotGalleries[screenshotProject].length;
+  screenshotIndex = (screenshotIndex + step + length) % length;
+  renderScreenshot();
+}
+
+screenshotDialog.querySelector(".screenshot-previous").addEventListener("click", () => changeScreenshot(-1));
+screenshotDialog.querySelector(".screenshot-next").addEventListener("click", () => changeScreenshot(1));
+screenshotDialog.addEventListener("keydown", (event) => {
+  if (event.key === "ArrowLeft" || event.key === "ArrowRight") {
+    event.preventDefault();
+    changeScreenshot(event.key === "ArrowLeft" ? -1 : 1);
+  }
+});
 document.querySelectorAll("[data-image-preview]").forEach((link) => {
   link.addEventListener("click", (event) => {
     if (typeof screenshotDialog.showModal !== "function") return;
     event.preventDefault();
-    const image = link.querySelector("img");
-    const preview = screenshotDialog.querySelector("img");
-    preview.src = image.src;
-    preview.alt = image.alt;
+    screenshotProject = link.closest(".project-card").dataset.project;
+    screenshotIndex = 0;
+    renderScreenshot();
     document.querySelector("#screenshot-title").textContent = link.closest(".project-card").querySelector("h3").textContent;
     screenshotTrigger = link;
     document.body.classList.add("modal-open");
