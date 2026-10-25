@@ -285,6 +285,9 @@ main {
   display: none;
 }
 @media (max-width: 768px) {
+  .section-menu {
+    display: none;
+  }
   .section-menu:has(.menu-toggle:not([hidden])) {
     background: none;
     border: 0;
