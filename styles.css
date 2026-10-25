@@ -152,6 +152,9 @@ ul {
 }
 
 .profile-photo {
+  display: block;
+  width: 100%;
+  padding: 0;
   overflow: hidden;
   border-radius: 16px;
   background: #ededed;
@@ -163,6 +166,9 @@ ul {
   object-fit: cover;
   object-position: center 22%;
   filter: none;
+}
+.profile-photo.is-playing img {
+  object-position: center;
 }
 h1 {
   font-family: Impact, "Arial Narrow", "Helvetica Neue", sans-serif;

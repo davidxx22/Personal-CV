@@ -209,3 +209,92 @@ screenshotDialog.addEventListener("close", () => {
   document.body.classList.remove("modal-open");
   screenshotTrigger?.focus();
 });
+
+const profilePhoto = document.querySelector(".profile-photo");
+const profileImage = profilePhoto.querySelector("img");
+const formalPortrait = profileImage.getAttribute("src");
+const formalDescription = profileImage.alt;
+let personalPhotosPromise;
+let photoTimer;
+let photoSession = 0;
+let personalPhotoIndex = -1;
+let photoPlaying = false;
+
+function loadPersonalPhotos() {
+  personalPhotosPromise ??= Promise.all(
+    Array.from({ length: 9 }, async (_, index) => {
+      const image = new Image();
+      image.src = `assets/profile/photo-${index + 1}.jpg`;
+      try {
+        await image.decode();
+        return image;
+      } catch {
+        return null;
+      }
+    }),
+  ).then((images) => images.filter(Boolean));
+  return personalPhotosPromise;
+}
+
+function stopProfilePhotos() {
+  photoSession++;
+  clearInterval(photoTimer);
+  photoTimer = null;
+  photoPlaying = false;
+  personalPhotoIndex = -1;
+  profilePhoto.classList.remove("is-playing");
+  profilePhoto.setAttribute("aria-pressed", "false");
+  profileImage.src = formalPortrait;
+  profileImage.alt = formalDescription;
+}
+
+function showPersonalPhoto(images) {
+  personalPhotoIndex = (personalPhotoIndex + 1) % images.length;
+  profileImage.src = images[personalPhotoIndex].src;
+  profileImage.alt = `Personal photo ${personalPhotoIndex + 1} of ${images.length}`;
+  profilePhoto.classList.add("is-playing");
+}
+
+async function startProfilePhotos() {
+  if (photoPlaying || motionPreference.matches) return;
+  photoPlaying = true;
+  const session = ++photoSession;
+  const images = await loadPersonalPhotos();
+  if (session !== photoSession) return;
+  if (!images.length) return stopProfilePhotos();
+  profilePhoto.setAttribute("aria-pressed", "true");
+  showPersonalPhoto(images);
+  photoTimer = window.setInterval(() => showPersonalPhoto(images), 750);
+}
+
+profilePhoto.addEventListener("pointerenter", (event) => {
+  if (event.pointerType === "mouse") startProfilePhotos();
+});
+profilePhoto.addEventListener("pointerleave", (event) => {
+  if (event.pointerType === "mouse") stopProfilePhotos();
+});
+profilePhoto.addEventListener("click", async () => {
+  if (motionPreference.matches) {
+    const session = photoSession;
+    const images = await loadPersonalPhotos();
+    if (session === photoSession && images.length) showPersonalPhoto(images);
+  } else if (photoPlaying) stopProfilePhotos();
+  else startProfilePhotos();
+});
+profilePhoto.addEventListener("blur", stopProfilePhotos);
+profilePhoto.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") stopProfilePhotos();
+});
+motionPreference.addEventListener("change", () => {
+  stopProfilePhotos();
+  profilePhoto.setAttribute("aria-label", motionPreference.matches ? "Show next personal photo" : "Play personal photo slideshow");
+});
+if (motionPreference.matches) profilePhoto.setAttribute("aria-label", "Show next personal photo");
+document.addEventListener("visibilitychange", () => {
+  if (document.hidden) stopProfilePhotos();
+});
+if ("IntersectionObserver" in window) {
+  new IntersectionObserver(([entry]) => {
+    if (!entry.isIntersecting) stopProfilePhotos();
+  }).observe(profilePhoto);
+}
