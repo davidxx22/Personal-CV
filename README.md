@@ -25,7 +25,7 @@ No application framework, package installation, build command, or environment va
 
 ## Features
 
-- Profile photo cycles through nine personal photos every 750ms on hover, with tap/keyboard play and pause. Reduced-motion users advance photos manually.
+- Profile photo cycles through ten personal photos every 750ms on hover, with tap/keyboard play and pause. Reduced-motion users advance photos manually.
 - Responsive desktop, laptop, tablet, and mobile layouts with a portrait sidebar and no navigation bar.
 - Eight completed projects, filterable into individual and group work.
 - Repository and website/project-page links for every project.

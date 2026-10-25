@@ -222,7 +222,7 @@ let photoPlaying = false;
 
 function loadPersonalPhotos() {
   personalPhotosPromise ??= Promise.all(
-    Array.from({ length: 9 }, async (_, index) => {
+    Array.from({ length: 10 }, async (_, index) => {
       const image = new Image();
       image.src = `assets/profile/photo-${index + 1}.jpg`;
       try {
