@@ -2,8 +2,8 @@
 
 ## Required links
 
-- GitHub repository: https://github.com/davidxx22/Personal-CV
-- Public Vercel website: https://david-balios-cv.vercel.app/
+- GitHub repository: https://github.com/davidxx22/davidreybali-os
+- Public Vercel website: https://davidreybali-os.vercel.app/
 
 ## Content
 
@@ -31,7 +31,7 @@
 
 ## GitHub
 
-- [x] Source pushed to the public `Personal-CV` repository.
+- [x] Source pushed to the public `davidreybali-os` repository.
 - [x] README includes student name, description, technologies, and live link.
 - [x] Multiple meaningful commits visible.
 - [x] Repository accessible without authentication.
