@@ -1270,7 +1270,7 @@ main {
 }
 @media (max-width: 700px) {
   html {
-    scroll-padding-top: 24px;
+    scroll-padding-top: 140px;
   }
   body {
     padding: 10px;
