@@ -565,6 +565,7 @@ main {
 }
 .projects-section {
   min-width: 0;
+  padding-bottom: 16px;
 }
 .section-heading {
   display: flex;
@@ -617,7 +618,7 @@ main {
 }
 .show-more-projects {
   display: block;
-  margin: 18px auto 0;
+  margin: 6px auto 0;
   background: none;
   border: 0;
   padding: 8px 11px;
