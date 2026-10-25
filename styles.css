@@ -716,8 +716,7 @@ main {
 }
 .project-actions a:hover,
 .detail-button:hover {
-  text-decoration: underline;
-  text-underline-offset: 4px;
+  text-decoration: none;
 }
 .project-actions .icon {
   width: 13px;
