@@ -2,7 +2,10 @@ const profileSidebar = document.querySelector(".profile-sidebar");
 
 function positionProfileSidebar() {
   const height = profileSidebar.getBoundingClientRect().height;
-  const top = Math.min(24, window.innerHeight - height - 24);
+  const shellBottom = document.querySelector(".resume-shell").getBoundingClientRect().bottom;
+  const top = shellBottom <= window.innerHeight - 24
+    ? shellBottom - height
+    : Math.min(24, window.innerHeight - height - 24);
   profileSidebar.style.setProperty("--profile-top", `${top}px`);
 }
 
@@ -91,6 +94,7 @@ const menuSections = sectionLinks.map((link) =>
 let sectionUpdatePending = false;
 
 function updateCurrentSection() {
+  positionProfileSidebar();
   const marker = Math.max(160, sectionMenu.getBoundingClientRect().bottom + 24);
   let current = 0;
   menuSections.forEach((section, index) => {
